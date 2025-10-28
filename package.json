@@ -1,0 +1,22 @@
+{
+  "name": "banh-ngot-admin",
+  "version": "1.0.0",
+  "description": "Admin panel for Sweet Dreams Website",
+  "main": "admin-server.js",
+  "scripts": {
+    "start": "node admin-server.js",
+    "admin": "bash start-admin.sh",
+    "admin:server": "node admin-server.js",
+    "dev": "nodemon admin-server.js"
+  },
+  "keywords": ["admin", "image-management"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

@@ -1,0 +1,17 @@
+# Vercel Ignore - Các file không deploy lên production
+
+# Admin Panel - Chỉ dùng local
+admin-images.html
+
+# Scripts - Không cần thiết trên production
+replace_images.sh
+*.sh
+
+# Development files
+*.md
+README.md
+
+# Git files
+.git
+.gitignore
+.gitattributes
