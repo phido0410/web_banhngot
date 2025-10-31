@@ -14,33 +14,36 @@ document.addEventListener("DOMContentLoaded", function () {
   if (hamburger && navMenu) {
     // Toggle mobile menu
     hamburger.addEventListener("click", function (e) {
+      e.preventDefault();
       e.stopPropagation();
       console.log('Hamburger clicked!');
+
+      const isActive = hamburger.classList.contains("active");
+
       hamburger.classList.toggle("active");
       navMenu.classList.toggle("active");
       body.classList.toggle("menu-open");
 
-      const isExpanded = hamburger.classList.contains("active");
-      hamburger.setAttribute("aria-expanded", isExpanded);
-      console.log('Menu is now:', isExpanded ? 'open' : 'closed');
+      hamburger.setAttribute("aria-expanded", !isActive);
+      console.log('Menu is now:', !isActive ? 'open' : 'closed');
     });
 
     // Handle dropdown toggles on mobile
     dropdowns.forEach(dropdown => {
       const toggle = dropdown.querySelector(".dropdown-toggle");
-      
+
       console.log('Setting up dropdown:', dropdown, 'Toggle:', toggle);
-      
+
       if (toggle) {
-        toggle.addEventListener("click", function(e) {
+        toggle.addEventListener("click", function (e) {
           console.log('Toggle clicked! Window width:', window.innerWidth);
-          
+
           if (window.innerWidth <= 768) {
             e.preventDefault();
             e.stopPropagation();
-            
+
             console.log('Dropdown clicked on mobile');
-            
+
             // Close other dropdowns
             dropdowns.forEach(other => {
               if (other !== dropdown) {
@@ -48,23 +51,42 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log('Closed other dropdown');
               }
             });
-            
+
             // Toggle current dropdown
             const wasActive = dropdown.classList.contains("active");
             dropdown.classList.toggle("active");
-            
+
             console.log('Dropdown toggled from', wasActive, 'to', dropdown.classList.contains("active"));
             console.log('Dropdown classes:', dropdown.className);
-            
+
             // Force check dropdown menu
             const menu = dropdown.querySelector(".dropdown-menu");
             if (menu) {
               console.log('Dropdown menu found:', menu);
               console.log('Menu max-height:', window.getComputedStyle(menu).maxHeight);
               console.log('Menu display:', window.getComputedStyle(menu).display);
+              console.log('Menu padding:', window.getComputedStyle(menu).padding);
             }
           }
         });
+
+        // Also handle touch events for better mobile support
+        toggle.addEventListener("touchend", function (e) {
+          if (window.innerWidth <= 768) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            // Close other dropdowns
+            dropdowns.forEach(other => {
+              if (other !== dropdown) {
+                other.classList.remove("active");
+              }
+            });
+
+            // Toggle current dropdown
+            dropdown.classList.toggle("active");
+          }
+        }, { passive: false });
       }
     });
 
@@ -77,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
           navMenu.classList.remove("active");
           body.classList.remove("menu-open");
           hamburger.setAttribute("aria-expanded", "false");
-          
+
           // Close all dropdowns
           dropdowns.forEach(dropdown => {
             dropdown.classList.remove("active");
@@ -98,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navMenu.classList.remove("active");
         body.classList.remove("menu-open");
         hamburger.setAttribute("aria-expanded", "false");
-        
+
         // Close all dropdowns
         dropdowns.forEach(dropdown => {
           dropdown.classList.remove("active");
@@ -113,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
         navMenu.classList.remove("active");
         body.classList.remove("menu-open");
         hamburger.setAttribute("aria-expanded", "false");
-        
+
         // Close all dropdowns
         dropdowns.forEach(dropdown => {
           dropdown.classList.remove("active");

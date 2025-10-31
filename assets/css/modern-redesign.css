@@ -1243,6 +1243,9 @@
 @media (max-width: 768px) {
     .hero-modern {
         padding: 4rem 0 6rem;
+        margin-top: 0;
+        position: relative;
+        z-index: 1;
     }
 
     .hero-stats {
@@ -1255,6 +1258,8 @@
 
     .hero-image-wrapper {
         min-height: 350px;
+        position: relative;
+        z-index: 1;
     }
 
     .hero-main-img {
