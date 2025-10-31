@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng Dẫn Đặt Hàng - Sweet Dreams Bakery</title>
+    <meta name="description"
+        content="Hướng dẫn chi tiết cách đặt hàng bánh ngọt tại Sweet Dreams. Đơn giản, nhanh chóng, tiện lợi.">
+    <link rel="canonical" href="https://web-banhngot.vercel.app/huong-dan-dat-hang">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/modern-redesign.css">
+    <link rel="stylesheet" href="assets/css/mobile-nav-fixes.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
+                        <span class="logo-text">Sweet Dreams</span>
+                    </a>
+                </div>
+
+                <button class="hamburger" aria-label="Mở menu điều hướng">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Sản phẩm
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="banh-su-kem.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥐</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Su Kem</span>
+                                        <span class="dropdown-item-desc">Vỏ giòn, nhân kem mịn</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-mi-ngot.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍞</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Mì Ngọt</span>
+                                        <span class="dropdown-item-desc">Mềm như bông, thơm bơ sữa</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-macaron.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍪</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Macaron</span>
+                                        <span class="dropdown-item-desc">Pháp cao cấp, nhiều vị</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-bong-lan-cuon.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🎂</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Bông Lan Cuốn</span>
+                                        <span class="dropdown-item-desc">Mềm mịn, nhân kem tươi</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-ngot-hong-kong.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥮</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Hong Kong</span>
+                                        <span class="dropdown-item-desc">Tart trứng, bồ lô bao</span>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="lien-he.html" class="nav-link">Liên hệ</a></li>
+                </ul>
+                <a href="cart.html" class="cart-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" style="display: none;">0</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-modern" style="padding: 100px 0 60px; min-height: auto;">
+        <div class="hero-bg-pattern"></div>
+        <div class="container">
+            <div class="text-center" style="max-width: 800px; margin: 0 auto;">
+                <div class="hero-badge" style="margin: 0 auto;">📦 Hướng Dẫn Đặt Hàng</div>
+                <h1 class="hero-title-modern" style="font-size: 3rem; margin-bottom: 1.5rem;">
+                    Đặt Hàng <span class="text-gradient">Dễ Dàng</span> & Nhanh Chóng
+                </h1>
+                <p class="hero-subtitle-modern" style="margin: 0 auto;">
+                    Chỉ với 4 bước đơn giản, bạn có thể đặt hàng và nhận bánh ngọt tươi ngon tận nhà
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section style="padding: 60px 0;">
+        <div class="container">
+            <div class="steps-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; margin-bottom: 80px;">
+                <!-- Step 1 -->
+                <div class="step-card"
+                    style="background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center; position: relative;">
+                    <div
+                        style="width: 70px; height: 70px; background: linear-gradient(135deg, #E11D48 0%, #F472B6 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2rem; color: white; font-weight: bold;">
+                        1</div>
+                    <div style="font-size: 2.5rem; margin-bottom: 20px;">🛍️</div>
+                    <h3
+                        style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; color: #1a1a1a;">
+                        Chọn Sản Phẩm</h3>
+                    <p style="color: #666; line-height: 1.8;">
+                        Duyệt qua menu và chọn các sản phẩm bánh ngọt yêu thích. Nhấn "Thêm vào giỏ" để lưu sản phẩm.
+                    </p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-card"
+                    style="background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
+                    <div
+                        style="width: 70px; height: 70px; background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2rem; color: white; font-weight: bold;">
+                        2</div>
+                    <div style="font-size: 2.5rem; margin-bottom: 20px;">🛒</div>
+                    <h3
+                        style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; color: #1a1a1a;">
+                        Xem Giỏ Hàng</h3>
+                    <p style="color: #666; line-height: 1.8;">
+                        Kiểm tra lại đơn hàng, điều chỉnh số lượng nếu cần. Áp dụng mã giảm giá nếu có.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-card"
+                    style="background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
+                    <div
+                        style="width: 70px; height: 70px; background: linear-gradient(135deg, #06B6D4 0%, #67E8F9 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2rem; color: white; font-weight: bold;">
+                        3</div>
+                    <div style="font-size: 2.5rem; margin-bottom: 20px;">📝</div>
+                    <h3
+                        style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; color: #1a1a1a;">
+                        Điền Thông Tin</h3>
+                    <p style="color: #666; line-height: 1.8;">
+                        Nhập thông tin giao hàng: họ tên, địa chỉ, số điện thoại, ghi chú (nếu có).
+                    </p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-card"
+                    style="background: #fff; padding: 40px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08); text-align: center;">
+                    <div
+                        style="width: 70px; height: 70px; background: linear-gradient(135deg, #10B981 0%, #34D399 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2rem; color: white; font-weight: bold;">
+                        4</div>
+                    <div style="font-size: 2.5rem; margin-bottom: 20px;">💳</div>
+                    <h3
+                        style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; color: #1a1a1a;">
+                        Thanh Toán</h3>
+                    <p style="color: #666; line-height: 1.8;">
+                        Chọn phương thức thanh toán (COD, chuyển khoản, thẻ). Xác nhận đơn hàng và hoàn tất!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div
+                style="max-width: 1000px; margin: 0 auto 80px; background: #fff; padding: 50px; border-radius: 20px; box-shadow: 0 10px 40px rgba(0,0,0,0.08);">
+                <h2
+                    style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 15px; text-align: center;">
+                    Phương Thức Thanh Toán</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 40px;">Chúng tôi hỗ trợ đa dạng hình thức
+                    thanh toán tiện lợi</p>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px;">
+                    <div style="padding: 30px; border: 2px solid #f0f0f0; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">💵</div>
+                        <h4 style="font-weight: 600; margin-bottom: 10px; font-size: 1.2rem;">COD</h4>
+                        <p style="color: #666; font-size: 0.95rem;">Thanh toán khi nhận hàng</p>
+                    </div>
+                    <div style="padding: 30px; border: 2px solid #f0f0f0; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">🏦</div>
+                        <h4 style="font-weight: 600; margin-bottom: 10px; font-size: 1.2rem;">Chuyển Khoản</h4>
+                        <p style="color: #666; font-size: 0.95rem;">Vietcombank, VPBank, BIDV</p>
+                    </div>
+                    <div style="padding: 30px; border: 2px solid #f0f0f0; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">💳</div>
+                        <h4 style="font-weight: 600; margin-bottom: 10px; font-size: 1.2rem;">Thẻ ATM/Credit</h4>
+                        <p style="color: #666; font-size: 0.95rem;">Visa, Mastercard, JCB</p>
+                    </div>
+                    <div style="padding: 30px; border: 2px solid #f0f0f0; border-radius: 15px; text-align: center;">
+                        <div style="font-size: 3rem; margin-bottom: 15px;">📱</div>
+                        <h4 style="font-weight: 600; margin-bottom: 10px; font-size: 1.2rem;">Ví Điện Tử</h4>
+                        <p style="color: #666; font-size: 0.95rem;">Momo, ZaloPay, VNPay</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delivery Info -->
+            <div
+                style="max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, #FDF2F8 0%, #FCE7F3 100%); padding: 50px; border-radius: 20px;">
+                <h2
+                    style="font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 15px; text-align: center; color: #1a1a1a;">
+                    Thông Tin Giao Hàng</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 40px;">Cam kết giao hàng nhanh chóng, an toàn
+                </p>
+
+                <div style="display: grid; gap: 20px;">
+                    <div
+                        style="background: white; padding: 25px; border-radius: 15px; display: flex; align-items: start; gap: 20px;">
+                        <div style="font-size: 2rem;">🚚</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 8px; color: #1a1a1a;">Thời gian giao hàng</h4>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                • Nội thành HCM: 1-2 giờ<br>
+                                • Các quận lân cận: 2-4 giờ<br>
+                                • Các tỉnh: 1-3 ngày
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: white; padding: 25px; border-radius: 15px; display: flex; align-items: start; gap: 20px;">
+                        <div style="font-size: 2rem;">💰</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 8px; color: #1a1a1a;">Phí vận chuyển</h4>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                • Đơn từ 500K: <strong style="color: #10B981;">MIỄN PHÍ</strong><br>
+                                • Đơn dưới 500K: 30K (nội thành), 50K (ngoại thành)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: white; padding: 25px; border-radius: 15px; display: flex; align-items: start; gap: 20px;">
+                        <div style="font-size: 2rem;">📦</div>
+                        <div>
+                            <h4 style="font-weight: 600; margin-bottom: 8px; color: #1a1a1a;">Đóng gói</h4>
+                            <p style="color: #666; line-height: 1.6; margin: 0;">
+                                Sản phẩm được đóng gói cẩn thận, giữ lạnh và bảo quản tốt trong quá trình vận chuyển.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div style="text-align: center; margin-top: 60px;">
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 20px;">Sẵn Sàng Đặt
+                    Hàng?</h2>
+                <p style="color: #666; font-size: 1.1rem; margin-bottom: 30px;">Khám phá menu và chọn những món bánh yêu
+                    thích ngay hôm nay!</p>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="index.html#products" class="btn-primary"
+                        style="display: inline-flex; align-items: center; text-decoration: none;">
+                        <span>Xem Menu</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" style="margin-left: 10px;">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </a>
+                    <a href="lien-he.html" class="btn-secondary"
+                        style="display: inline-flex; align-items: center; text-decoration: none;">
+                        <span>Liên Hệ Tư Vấn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - Modern with Soft Background -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
+                        <span>Sweet Dreams</span>
+                    </div>
+                    <p class="footer-description">
+                        Tiệm bánh ngọt cao cấp với 10+ năm kinh nghiệm.
+                        Chuyên cung cấp bánh tươi mỗi ngày từ nguyên liệu nhập khẩu.
+                    </p>
+                    <div class="social-links-modern">
+                        <a href="https://www.facebook.com" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>Số 150, Ngõ 43 Cổ Nhuế<br>Bắc Từ Liêm, Hà Nội</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>0336 981 413</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>vuonghienn20@gmail.com</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <span>8:00 - 22:00 (T2-CN)</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Products Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Sản Phẩm</h3>
+                    <ul class="footer-links">
+                        <li><a href="banh-su-kem.html">Bánh Su Kem</a></li>
+                        <li><a href="banh-macaron.html">Bánh Macaron</a></li>
+                        <li><a href="banh-mi-ngot.html">Bánh Mì Ngọt</a></li>
+                        <li><a href="banh-bong-lan-cuon.html">Bánh Bông Lan Cuốn</a></li>
+                        <li><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></li>
+                    </ul>
+                </div>
+
+                <!-- Links Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Thông Tin</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="blog.html">Blog & Tips</a></li>
+                        <li><a href="lien-he.html">Liên Hệ</a></li>
+                        <li><a href="huong-dan-dat-hang.html">Hướng Dẫn Đặt Hàng</a></li>
+                        <li><a href="chinh-sach-bao-mat.html">Chính Sách Bảo Mật</a></li>
+                        <li><a href="dieu-khoan-su-dung.html">Điều Khoản Sử Dụng</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom-modern">
+                <p>&copy; 2024 Sweet Dreams Bakery. All rights reserved.</p>
+                <div class="footer-payment">
+                    <span>Chấp nhận thanh toán:</span>
+                    <div class="payment-icons">
+                        <span>💳</span>
+                        <span>🏦</span>
+                        <span>📱</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+
+</html>
