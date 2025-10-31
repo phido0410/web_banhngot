@@ -1,73 +1,459 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bánh Macaron Pháp - Nhiều Màu Sắc Hương Vị | Sweet Dreams</title>
-    <meta name="description" content="Bánh macaron Pháp chính hiệu tại Sweet Dreams - vỏ giòn nhân mềm, đa dạng màu sắc và hương vị độc đáo. Rose, pistachio, passion fruit. Đặt hàng ngay!">
-    <meta name="keywords" content="bánh macaron, macaron Pháp, bánh macaron màu sắc, bánh macaron HCM, french macaron, bánh macaron ngon">
-    <meta name="author" content="Sweet Dreams Bakery">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Bánh Macaron Pháp - Sweet Dreams Bakery">
-    <meta property="og:description" content="Bánh macaron chính hiệu với vỏ giòn nhân mềm, đa dạng màu sắc hương vị từ rose đến pistachio.">
-    <meta property="og:type" content="product">
+    <title>Bánh Macaron Cao Cấp Pháp - French Macarons | Sweet Dreams</title>
+    <meta name="description"
+        content="Khám phá bộ sưu tập macaron Pháp cao cấp tại Sweet Dreams. Macaron handmade với hương vị tinh tế, màu sắc rực rỡ. Nghệ thuật patisserie Pháp chính hiệu tại Việt Nam.">
+    <meta name="keywords"
+        content="bánh macaron, macaron Pháp, French macarons, bánh macaron cao cấp, macaron handmade, macaron gift box, bánh ngọt Pháp">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bánh Macaron Cao Cấp Pháp - Sweet Dreams">
+    <meta property="og:description" content="Macaron Pháp chính hiệu với hương vị tinh tế và màu sắc rực rỡ">
+    <meta property="og:image" content="https://web-banhngot.vercel.app/assets/images/macaron-hero.jpg">
     <meta property="og:url" content="https://web-banhngot.vercel.app/banh-macaron">
-    <meta property="og:image" content="https://web-banhngot.vercel.app/assets/images/banh-macaron-og.jpg">
-    
-    <!-- Canonical URL -->
+
     <link rel="canonical" href="https://web-banhngot.vercel.app/banh-macaron">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="stylesheet" href="assets/css/modern-redesign.css">
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Bánh Macaron",
-        "description": "Bánh macaron Pháp chính hiệu với vỏ giòn nhân mềm và đa dạng hương vị",
-        "image": "https://web-banhngot.vercel.app/assets/images/banh-macaron.jpg",
-        "brand": {
-            "@type": "Brand",
-            "name": "Sweet Dreams Bakery"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "35000",
-            "priceCurrency": "VND",
-            "availability": "https://schema.org/InStock"
-        }
+        "@type": "CollectionPage",
+        "name": "Bánh Macaron Pháp",
+        "description": "Bộ sưu tập macaron Pháp cao cấp handmade với hơn 20 hương vị độc đáo",
+        "url": "https://web-banhngot.vercel.app/banh-macaron",
+        "image": "https://web-banhngot.vercel.app/assets/images/macaron-collection.jpg"
     }
     </script>
+
+    <style>
+        /* Macaron-specific styles only */
+        .macaron-hero {
+            background: linear-gradient(135deg, #E6E6FA 0%, #FFF0F5 50%, #FFDAB9 100%);
+        }
+
+        .hero-main-image {
+            animation: floatImage 6s ease-in-out infinite;
+        }
+
+        @keyframes floatImage {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Gradient tím cho macaron */
+        .btn-primary-hero {
+            background: linear-gradient(135deg, #FF69B4, #9370DB);
+        }
+
+        .hero-text-content h1 strong,
+        .intro-text h2 strong {
+            background: linear-gradient(135deg, #FF69B4, #9370DB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .product-price-premium {
+            background: linear-gradient(135deg, #FF69B4, #9370DB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .product-badge {
+            background: linear-gradient(135deg, #FF69B4, #9370DB);
+        }
+
+        .btn-view-product {
+            background: linear-gradient(135deg, #FF69B4, #9370DB);
+            color: white;
+        }
+
+        .btn-view-product:hover {
+            transform: translateX(5px);
+        }
+
+        /* Process section với background gradient */
+        .process-section {
+            background: linear-gradient(135deg, #E6E6FA 0%, #FFF0F5 100%);
+        }
+
+        .process-step {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+        }
+
+        .process-icon {
+            background: linear-gradient(135deg, #FFE5EC, #E6E6FA);
+        }
+
+        .process-step:hover .process-icon {
+            transform: rotate(360deg);
+        }
+
+        .process-number {
+            background: #D4AF37;
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Flavor palette section */
+        .flavor-palette {
+            padding: 8rem 5%;
+            background: linear-gradient(180deg, white 0%, #FAFAFA 100%);
+        }
+
+        .flavor-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .flavor-card {
+            text-align: center;
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .flavor-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .flavor-circle {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .flavor-card:hover .flavor-circle {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+
+        .flavor-card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: #2C2C2C;
+            margin-bottom: 0.5rem;
+        }
+
+        .flavor-card p {
+            font-size: 0.95rem;
+            color: #6B6B6B;
+            line-height: 1.6;
+        }
+
+        /* Stats section */
+        .intro-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: #FAFAFA;
+            border-radius: 15px;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #FF69B4;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #6B6B6B;
+        }
+
+        /* Gift Box Collection */
+        .gift-collection {
+            padding: 8rem 5%;
+            background: white;
+        }
+
+        .gift-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 4rem;
+            max-width: 1400px;
+            margin: 3rem auto 0;
+        }
+
+        .gift-card {
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .gift-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+        }
+
+        .gift-image {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .gift-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .gift-card:hover .gift-image img {
+            transform: scale(1.1);
+        }
+
+        .gift-content {
+            padding: 3rem;
+            background: white;
+        }
+
+        .gift-content h3 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #2C2C2C;
+            margin-bottom: 1rem;
+        }
+
+        .gift-content p {
+            font-size: 1.1rem;
+            color: #6B6B6B;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .gift-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .gift-feature {
+            font-size: 0.95rem;
+            color: #6B6B6B;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .gift-feature:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #FF69B4;
+            font-weight: 600;
+        }
+
+        .gift-price {
+            font-size: 1.8rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #FF69B4, #9370DB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Custom card animation */
+        .custom-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .custom-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #FF69B4, #9370DB, #98FF98);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .custom-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Final CTA decorations */
+        .final-cta {
+            background: linear-gradient(135deg, #FF69B4 0%, #9370DB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .final-cta::before {
+            content: '🍰';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%) rotate(-15deg);
+        }
+
+        .final-cta::after {
+            content: '🎂';
+            position: absolute;
+            font-size: 15rem;
+            opacity: 0.1;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%) rotate(15deg);
+        }
+
+        .final-cta h2,
+        .final-cta p,
+        .btn-final-cta {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Responsive overrides */
+        @media (max-width: 1024px) {
+            .intro-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .flavor-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gift-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .intro-stats,
+            .flavor-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gift-features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <!-- Logo -->
                 <div class="navbar-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon"><span class="emoji-icon">🧁</span></div>
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
                         <span class="logo-text">Sweet Dreams</span>
                     </a>
                 </div>
-
-                <!-- Navigation Menu -->
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
-                    <li class="nav-item"><a href="banh-su-kem.html" class="nav-link">Bánh su kem</a></li>
-                    <li class="nav-item"><a href="banh-mi-ngot.html" class="nav-link">Bánh mì ngọt</a></li>
-                    <li class="nav-item"><a href="banh-macaron.html" class="nav-link active">Bánh macaron</a></li>
-                    <li class="nav-item"><a href="banh-bong-lan-cuon.html" class="nav-link">Bánh bông lan cuốn</a></li>
-                    <li class="nav-item"><a href="banh-ngot-hong-kong.html" class="nav-link">Bánh Hong Kong</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active">
+                            Sản phẩm
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="banh-su-kem.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥐</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Su Kem</span>
+                                        <span class="dropdown-item-desc">Vỏ giòn, nhân kem mịn</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-mi-ngot.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍞</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Mì Ngọt</span>
+                                        <span class="dropdown-item-desc">Mềm như bông, thơm bơ sữa</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-macaron.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍪</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Macaron</span>
+                                        <span class="dropdown-item-desc">Pháp cao cấp, nhiều vị</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-bong-lan-cuon.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🎂</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Bông Lan Cuốn</span>
+                                        <span class="dropdown-item-desc">Mềm mịn, nhân kem tươi</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-ngot-hong-kong.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥮</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Hong Kong</span>
+                                        <span class="dropdown-item-desc">Tart trứng, bồ lô bao</span>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="cart-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
                 </ul>
-
-                <!-- Hamburger Menu -->
-                <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="hamburger" aria-label="Toggle navigation">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -76,347 +462,495 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title"><span class="emoji-icon">🧁</span> Bánh Macaron - Những Viên Bánh Đầy Màu Sắc</h1>
-                <p class="page-subtitle">Khám phá thế giới macaron tuyệt vời với những hương vị độc đáo từ rose, pistachio đến passion fruit. Mỗi viên macaron đều có vỏ giòn và nhân mềm mịn.</p>
+    <!-- Hero Section -->
+    <section class="category-hero macaron-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <h1>Macaron Pháp<br><strong>Chính Hiệu</strong></h1>
+                <p class="hero-subtitle">
+                    Nghệ thuật patisserie Pháp tinh tế trong từng chiếc macaron. Vỏ giòn tan, lớp nhân mềm mịn,
+                    hương vị đa dạng và màu sắc rực rỡ. Handmade mỗi ngày bởi đội ngũ pastry chef chuyên nghiệp.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#products" class="btn-primary-hero">Khám Phá Hương Vị</a>
+                    <a href="#giftbox" class="btn-secondary-hero">Xem Gift Box</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=800&auto=format&fit=crop"
+                    alt="Bánh macaron Pháp cao cấp Sweet Dreams" class="hero-main-image">
             </div>
         </div>
     </section>
 
-    <!-- Breadcrumb Navigation -->
-    <div class="breadcrumb-section">
-        <div class="container">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <ol class="breadcrumb-list">
-                    <li class="breadcrumb-item">
-                        <a href="index.html" class="breadcrumb-link">
-                            <svg class="breadcrumb-home-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                            </svg>
-                            Trang chủ
-                        </a>
-                    </li>
-                    <li class="breadcrumb-separator" aria-hidden="true">›</li>
-                    <li class="breadcrumb-item active" aria-current="page">Bánh macaron</li>
-                </ol>
-            </nav>
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>Macaron<br><strong>Nghệ Thuật Từ Paris</strong></h2>
+                <p>
+                    Sweet Dreams tự hào mang đến trải nghiệm macaron Pháp đích thực với công thức truyền thống
+                    từ Paris, được điều chỉnh tinh tế để phù hợp với khẩu vị Việt Nam.
+                </p>
+                <p>
+                    Mỗi chiếc macaron được làm thủ công hoàn toàn, từ việc nghiền bột hạnh nhân, đánh lòng trắng
+                    trứng đến độ cứng hoàn hảo, đến việc ủ vỏ bánh và làm nhân theo phương pháp macaronage
+                    chính hiệu.
+                </p>
+                <p>
+                    Hơn 20 hương vị độc đáo, nguyên liệu cao cấp nhập khẩu từ Pháp, Bỉ và Nhật Bản.
+                    Không chất bảo quản, không màu nhân tạo - chỉ có sự thuần khiết và tinh tế.
+                </p>
+
+                <div class="intro-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Hương Vị Độc Đáo</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Handmade</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5★</div>
+                        <div class="stat-label">Đánh Giá</div>
+                    </div>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=600&auto=format&fit=crop"
+                    alt="Quy trình làm macaron Pháp chính hiệu">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <div class="content">
-                <h1>🌈 Bánh Macaron Pháp - Nghệ Thuật Bánh Ngọt Đầy Màu Sắc</h1>
-                
-                <p><strong>Bánh macaron</strong> là biểu tượng của nghệ thuật bánh ngọt Pháp, và tại Sweet Dreams, chúng tôi tự hào mang đến những chiếc macaron chính hiệu với vỏ giòn tan, nhân mềm mịn và màu sắc rực rỡ như cầu vồng. Mỗi chiếc <strong>bánh macaron</strong> không chỉ là một món tráng miệng mà còn là tác phẩm nghệ thuật tinh tế.</p>
+    <!-- Flavor Palette Section -->
+    <section class="flavor-palette">
+        <div class="section-header">
+            <h2>Bảng Màu Hương Vị</h2>
+            <p>20+ hương vị được nghiên cứu và phát triển bởi đội ngũ pastry chef với kinh nghiệm tại Pháp</p>
+        </div>
 
-                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh macaron đầy màu sắc như cầu vồng tại Sweet Dreams" loading="lazy">
+        <div class="flavor-grid">
+            <div class="flavor-card">
+                <div class="flavor-circle" style="background: linear-gradient(135deg, #FFB6C1, #FFC0CB);">
+                    🌸
+                </div>
+                <h3>Rose Lychee</h3>
+                <p>Hoa hồng Bulgaria & vải thiều</p>
+            </div>
 
-                <h2>🎨 Nghệ Thuật Làm Bánh Macaron Chính Hiệu</h2>
-                
-                <p>Tại Sweet Dreams, việc làm <strong>bánh macaron</strong> không chỉ là một quy trình sản xuất mà còn là nghệ thuật. Mỗi chiếc bánh đều được chế tác tỉ mỉ qua nhiều công đoạn phức tạp, từ việc nghiền bột hạnh nhân đến màu sắc hoàn hảo của từng lớp vỏ bánh.</p>
+            <div class="flavor-card">
+                <div class="flavor-circle" style="background: linear-gradient(135deg, #E6E6FA, #DDA0DD);">
+                    💜
+                </div>
+                <h3>Lavender Honey</h3>
+                <p>Hoa oải hương & mật ong Provence</p>
+            </div>
 
-                <h3>🥜 Bột Hạnh Nhân Cao Cấp</h3>
-                <p>Chúng tôi sử dụng 100% bột hạnh nhân tự nhiên được nhập khẩu từ California và Pháp. Hạnh nhân được nghiền mịn đến từng micron, tạo nên độ mịn màng đặc trưng cho vỏ <strong>bánh macaron</strong>. Quá trình macaronage được thực hiện thủ công bởi bánh sư có kinh nghiệm hơn 15 năm.</p>
+            <div class="flavor-card">
+                <div class="flavor-circle" style="background: linear-gradient(135deg, #90EE90, #98FF98);">
+                    🍵
+                </div>
+                <h3>Matcha Premium</h3>
+                <p>Matcha Uji ceremonial Nhật Bản</p>
+            </div>
 
-                <h3>🌡️ Kỹ Thuật Nướng Đặc Biệt</h3>
-                <p>Nhiệt độ và thời gian nướng được kiểm soát chính xác đến từng độ. Lò nướng chuyên dụng cho macaron với hệ thống tuần hoàn khí đều đặn, tạo nên lớp vỏ giòn bên ngoài và mềm mịn bên trong. Mỗi mẻ bánh chỉ nướng tối đa 24 chiếc để đảm bảo chất lượng tuyệt đối.</p>
+            <div class="flavor-card">
+                <div class="flavor-circle" style="background: linear-gradient(135deg, #FFD700, #FFA500);">
+                    🍊
+                </div>
+                <h3>Yuzu Citrus</h3>
+                <p>Chanh yuzu & bergamot</p>
+            </div>
 
-                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Quy trình làm bánh macaron chuyên nghiệp tại Sweet Dreams" loading="lazy">
+            <div class="flavor-card">
+                <div class="flavor-circle" style="background: linear-gradient(135deg, #8B4513, #A0522D);">
+                    🍫
+                </div>
+                <h3>Dark Chocolate</h3>
+                <p>Chocolate đen 70% Valrhona</p>
+            </div>
 
-                <h2>🎭 Bộ Sưu Tập Hương Vị Macaron Độc Đáo</h2>
+            <div class="flavor-card">
+                <div class="flavor-circle" style="background: linear-gradient(135deg, #FF69B4, #FF1493);">
+                    🍓
+                </div>
+                <h3>Strawberry Basil</h3>
+                <p>Dâu tây Đà Lạt & húng quế</p>
+            </div>
 
-                <p>Sweet Dreams tự hào với bộ sưu tập hơn 20 hương vị <strong>bánh macaron</strong> khác nhau, từ những hương vị cổ điển đến những sáng tạo độc đáo mang dấu ấn riêng của chúng tôi.</p>
+            <div class="flavor-card">
+                <div class="flavor-circle" style="background: linear-gradient(135deg, #FFE4B5, #FFDAB9);">
+                    🥜
+                </div>
+                <h3>Salted Caramel</h3>
+                <p>Caramel & muối biển Guérande</p>
+            </div>
 
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh macaron hương hoa hồng" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Macaron Rose Romantique</h3>
-                            <p class="product-description">Hương vị hoa hồng Bulgaria tinh tế với màu hồng pastel lãng mạn. Nhân ganache hoa hồng và lychee tạo nên sự kết hợp hoàn hảo giữa hương thơm và vị ngọt nhẹ nhàng.</p>
-                            <div class="product-price">38.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
+            <div class="flavor-card">
+                <div class="flavor-circle" style="background: linear-gradient(135deg, #F0E68C, #EEE8AA);">
+                    🍋
+                </div>
+                <h3>Lemon Tart</h3>
+                <p>Chanh vàng Amalfi & meringue</p>
+            </div>
+        </div>
+    </section>
 
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh macaron hạt dẻ cười xanh" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Macaron Pistachio Sicilia</h3>
-                            <p class="product-description">Hạt dẻ cười Sicily nguyên chất với màu xanh tự nhiên quyến rũ. Vị béo ngậy đặc trưng của hạt dẻ cười kết hợp với ganache chocolate trắng tạo nên hương vị khó quên.</p>
-                            <div class="product-price">42.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
+    <!-- Product Showcase -->
+    <section class="product-showcase" id="products">
+        <div class="section-header">
+            <h2>Bộ Sưu Tập Signature</h2>
+            <p>Những hương vị được yêu thích nhất, tuyển chọn từ hơn 50 công thức thử nghiệm</p>
+        </div>
 
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh macaron chanh dây nhiệt đới" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Macaron Passion Fruit Tropical</h3>
-                            <p class="product-description">Chanh dây nhiệt đới tươi mát với màu vàng rực rỡ như nắng. Vị chua ngọt đặc trưng của chanh dây kết hợp với kem cheese tạo nên sự cân bằng vị giác tuyệt vời.</p>
-                            <div class="product-price">40.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh macaron hoa oải hương" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Macaron Lavender Dreams</h3>
-                            <p class="product-description">Hoa oải hương Provence với màu tím nhẹ nhàng thư giãn. Hương thơm dịu nhẹ của lavender kết hợp với mật ong tạo nên cảm giác bình yên và thư thái.</p>
-                            <div class="product-price">45.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh macaron caramel muối biển" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Macaron Salted Caramel</h3>
-                            <p class="product-description">Caramel muối biển Bretagne với sự kết hợp độc đáo giữa ngọt và mặn. Vị caramel đậm đà cùng muối biển tạo nên trải nghiệm vị giác đầy bất ngờ và thú vị.</p>
-                            <div class="product-price">40.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh macaron yuzu Nhật Bản" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Macaron Yuzu Japonais</h3>
-                            <p class="product-description">Yuzu Nhật Bản quý hiếm với hương vị citrus độc đáo. Sự kết hợp giữa vị chua thanh mát của yuzu và chocolate trắng tạo nên hương vị Á - Âu đặc biệt.</p>
-                            <div class="product-price">48.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
+        <div class="product-grid-premium">
+            <!-- Product 1 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Bestseller</span>
+                    <img src="https://images.unsplash.com/photo-1569864358642-9d1684040f43?q=80&w=500&auto=format&fit=crop"
+                        alt="Macaron Rose Romantique">
+                </div>
+                <div class="product-info-premium">
+                    <h3>Macaron Rose Romantique</h3>
+                    <p>Hương vị hoa hồng Bulgaria tinh tế với màu hồng pastel lãng mạn. Nhân ganache hoa hồng và vải
+                        thiều tạo nên sự kết hợp hoàn hảo</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">38.000đ/chiếc</span>
+                        <a href="products/macaron-rose-romantique.html" class="btn-view-product">Chi Tiết →</a>
                     </div>
                 </div>
+            </div>
 
-                <h2>🏆 Macaron Collection - Các Bộ Sưu Tập Đặc Biệt</h2>
-                
-                <p>Sweet Dreams thiết kế các bộ sưu tập <strong>bánh macaron</strong> theo chủ đề và mùa, mang đến trải nghiệm thị giác và vị giác hoàn hảo:</p>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🌸 Spring Collection</h3>
-                            <p>6 macaron mùa xuân: Rose, Sakura, Lavender, Lemon, Strawberry, Vanilla. Đóng hộp quà sang trọng với thiết kế hoa anh đào.</p>
-                            <div class="product-price">240.000đ/hộp</div>
-                            <button class="product-button">Đặt collection</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🍂 Autumn Spice Collection</h3>
-                            <p>6 macaron mùa thu: Cinnamon, Pumpkin Spice, Chestnut, Earl Grey, Caramel, Chocolate. Hương vị ấm áp của mùa thu.</p>
-                            <div class="product-price">260.000đ/hộp</div>
-                            <button class="product-button">Đặt collection</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🎄 Holiday Luxury Collection</h3>
-                            <p>12 macaron cao cấp: Champagne, Truffle, Gold Leaf, Cranberry, Gingerbread và các hương vị độc quyền dịp lễ.</p>
-                            <div class="product-price">580.000đ/hộp</div>
-                            <button class="product-button">Đặt collection</button>
-                        </div>
+            <!-- Product 2 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Premium</span>
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=500&auto=format&fit=crop"
+                        alt="Macaron Pistachio Sicilia">
+                </div>
+                <div class="product-info-premium">
+                    <h3>Macaron Pistachio Sicilia</h3>
+                    <p>Hạt dẻ cười Sicily nguyên chất với màu xanh tự nhiên quyến rũ. Vị béo ngậy đặc trưng của hạt dẻ
+                        cười kết hợp với ganache chocolate trắng</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">42.000đ/chiếc</span>
+                        <a href="products/macaron-pistachio-sicilia.html" class="btn-view-product">Chi Tiết →</a>
                     </div>
                 </div>
+            </div>
 
-                <h2>🎯 Tại Sao Macaron Sweet Dreams Đặc Biệt?</h2>
-                
-                <p>Với đam mê và tâm huyết dành cho nghệ thuật bánh ngọt Pháp, Sweet Dreams đã tạo nên những chiếc <strong>bánh macaron</strong> không chỉ ngon mà còn đẹp như tác phẩm nghệ thuật.</p>
-
-                <h3>🎨 Thiết Kế Độc Quyền</h3>
-                <p>Mỗi chiếc macaron đều được thiết kế màu sắc và trang trí riêng biệt. Chúng tôi sử dụng màu thực phẩm tự nhiên từ củ dền, matcha, than tre hoạt tính để tạo nên những màu sắc an toàn và đẹp mắt.</p>
-
-                <h3>🔬 Công Thức Độc Quyền</h3>
-                <p>Sau 5 năm nghiên cứu và phát triển, Sweet Dreams đã tạo ra công thức <strong>bánh macaron</strong> riêng với độ ẩm và texture hoàn hảo cho khí hậu nhiệt đới Việt Nam. Bánh giữ được độ giòn và không bị lem màu trong điều kiện khí hậu ẩm ướt.</p>
-
-                <h3>📦 Đóng Gói Sang Trọng</h3>
-                <p>Mỗi chiếc macaron được đặt trong hộp riêng biệt với đệm chống sốc. Hộp quà được thiết kế theo phong cách Pháp cổ điển, phù hợp làm quà tặng cho mọi dịp đặc biệt.</p>
-
-                <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Đóng gói bánh macaron sang trọng tại Sweet Dreams" loading="lazy">
-
-                <h2>📚 Câu Chuyện Của Macaron</h2>
-                
-                <p>Macaron có nguồn gốc từ thế kỷ 16 tại Pháp, được tạo ra bởi các tu sĩ. Tuy nhiên, phiên bản hiện đại mà chúng ta biết ngày nay được phát triển bởi Pierre Hermé và Ladurée vào đầu thế kỷ 20. <strong>Bánh macaron</strong> nhanh chóng trở thành biểu tượng của bánh ngọt Pháp và lan rộng khắp thế giới.</p>
-
-                <p>Tại Sweet Dreams, chúng tôi tôn trọng truyền thống này trong khi không ngừng sáng tạo để phù hợp với khẩu vị người Việt. Mỗi chiếc <strong>bánh macaron</strong> đều mang trong mình câu chuyện về nghệ thuật, đam mê và sự tận tâm.</p>
-
-                <h2>🍽️ Cách Thưởng Thức Macaron Đúng Cách</h2>
-                
-                <p>Để cảm nhận trọn vẹn hương vị của <strong>bánh macaron</strong>, hãy tham khảo cách thưởng thức đúng chuẩn Pháp:</p>
-
-                <ol style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Nhiệt độ:</strong> Để macaron ở nhiệt độ phòng 10-15 phút trước khi ăn</li>
-                    <li><strong>Cách cắn:</strong> Cắn nhẹ để cảm nhận độ giòn của vỏ, sau đó để bánh tan chậm trong miệng</li>
-                    <li><strong>Thứ tự:</strong> Bắt đầu từ hương vị nhẹ đến đậm để không bị lẫn vị</li>
-                    <li><strong>Đồ uống:</strong> Kết hợp với trà Earl Grey, café hoặc champagne tùy theo hương vị</li>
-                    <li><strong>Thời gian:</strong> Thưởng thức trong vòng 24 giờ để có trải nghiệm tốt nhất</li>
-                </ol>
-
-                <h2>🎁 Dịch Vụ Customization Macaron</h2>
-                
-                <p>Sweet Dreams cung cấp dịch vụ tùy chỉnh <strong>bánh macaron</strong> cho các sự kiện đặc biệt:</p>
-
-                <div style="background: var(--light-pink); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h3>🎨 Thiết Kế Theo Yêu Cầu</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Màu sắc theo chủ đề tiệc (wedding, birthday, corporate)</li>
-                        <li>In logo hoặc tên trên macaron bằng công nghệ food printing</li>
-                        <li>Tạo hương vị riêng theo yêu cầu khách hàng</li>
-                        <li>Đóng gói gift box sang trọng với thiết kế riêng</li>
-                    </ul>
-                    
-                    <h3>📅 Đặt Hàng Trước</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Macaron custom: đặt trước 5-7 ngày</li>
-                        <li>Collection đặc biệt: đặt trước 3-5 ngày</li>
-                        <li>Số lượng lớn (>100 chiếc): đặt trước 7-10 ngày</li>
-                        <li>Tư vấn miễn phí và báo giá chi tiết</li>
-                    </ul>
+            <!-- Product 3 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Signature</span>
+                    <img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?q=80&w=500&auto=format&fit=crop"
+                        alt="Macaron Salted Caramel">
                 </div>
-
-                <h2>🚚 Vận Chuyển Macaron Chuyên Nghiệp</h2>
-                
-                <p>Do tính chất đặc biệt của <strong>bánh macaron</strong>, Sweet Dreams đầu tư hệ thống vận chuyển chuyên dụng:</p>
-
-                <ul style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Thùng giữ lạnh:</strong> Nhiệt độ 15-18°C, độ ẩm 60%</li>
-                    <li><strong>Đóng gói chống sốc:</strong> Từng chiếc macaron được cố định riêng</li>
-                    <li><strong>Thời gian giao hàng:</strong> Tối đa 2 giờ trong nội thành</li>
-                    <li><strong>Bảo hiểm:</strong> 100% hoàn tiền nếu bánh bị hỏng do vận chuyển</li>
-                    <li><strong>Tracking realtime:</strong> Theo dõi đơn hàng qua app và SMS</li>
-                </ul>
-
-                <h2>💳 Bảng Giá Macaron Chi Tiết</h2>
-                
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
-                        <thead>
-                            <tr style="background: var(--primary-color); color: white;">
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Loại Macaron</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Giá lẻ</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Hộp 6 chiếc</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Hộp 12 chiếc</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Classic (Vanilla, Chocolate)</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">35.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">200.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">380.000đ</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Premium (Rose, Pistachio)</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">40.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">230.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">440.000đ</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Luxury (Lavender, Yuzu)</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">45.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">260.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">520.000đ</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>🏪 Địa Chỉ & Thông Tin Liên Hệ</h2>
-                
-                <div style="background: var(--light-pink); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h3 style="margin-bottom: 1rem;">🎯 Thông Tin Đặt Hàng Macaron</h3>
-                    <p><strong>📞 Hotline:</strong> +84 123 456 789 (24/7)</p>
-                    <p><strong>📍 Địa chỉ:</strong> 123 Đường Nguyễn Văn A, Quận 1, TP.HCM</p>
-                    <p><strong>🕒 Giờ mở cửa:</strong> 8:00 - 22:00 (Thứ 2 - Chủ nhật)</p>
-                    <p><strong>✉️ Email đặt hàng:</strong> macaron@sweetdreams.vn</p>
-                    <p><strong>💬 Chat tư vấn:</strong> Messenger, Zalo: Sweet Dreams Bakery</p>
-                </div>
-
-                <p>Hãy đến Sweet Dreams để khám phá thế giới <strong>bánh macaron</strong> đầy màu sắc và hương vị! Mỗi chiếc bánh không chỉ là món tráng miệng mà còn là trải nghiệm nghệ thuật thực sự. Chúng tôi cam kết mang đến những khoảnh khắc ngọt ngào và đáng nhớ nhất cho bạn.</p>
-
-                <!-- Internal links -->
-                <div style="margin-top: 3rem; padding: 2rem; background: var(--accent-color); border-radius: 15px;">
-                    <h3>🔗 Khám Phá Thêm Bánh Ngọt Khác</h3>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                        <a href="banh-su-kem.html" class="cta-button">Bánh Su Kem</a>
-                        <a href="banh-mi-ngot.html" class="cta-button">Bánh Mì Ngọt</a>
-                        <a href="banh-bong-lan-cuon.html" class="cta-button">Bánh Bông Lan Cuốn</a>
-                        <a href="banh-ngot-hong-kong.html" class="cta-button">Bánh Hong Kong</a>
-                        <a href="blog/macaron-vs-su-kem.html" class="cta-button">So Sánh Macaron vs Su Kem</a>
+                <div class="product-info-premium">
+                    <h3>Macaron Salted Caramel</h3>
+                    <p>Caramel muối biển Bretagne với sự kết hợp độc đáo giữa ngọt và mặn. Vị caramel đậm đà cùng muối
+                        biển Guérande tạo nên trải nghiệm đầy bất ngờ</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">40.000đ/chiếc</span>
+                        <a href="products/macaron-salted-caramel.html" class="btn-view-product">Chi Tiết →</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="section-header">
+            <h2>Quy Trình Làm Macaron Hoàn Hảo</h2>
+            <p>Phương pháp macaronage chính hiệu từ Paris, được truyền tải qua 5 thế hệ pastry chef</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="process-number">1</span>
+                <div class="process-icon">🥚</div>
+                <h3>Chuẩn Bị Meringue</h3>
+                <p>Đánh lòng trắng trứng đến độ cứng hoàn hảo với đường và bột hạnh nhân nghiền mịn</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">2</span>
+                <div class="process-icon">🌀</div>
+                <h3>Kỹ Thuật Macaronage</h3>
+                <p>Trộn bột với động tác đặc biệt để đạt độ nhớt và độ mịn chuẩn, tạo "ribbon stage"</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">3</span>
+                <div class="process-icon">⏰</div>
+                <h3>Ủ & Tạo Vỏ</h3>
+                <p>Để bánh nghỉ 30-60 phút tạo lớp vỏ mỏng, yếu tố quyết định "chân macaron" hoàn hảo</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">4</span>
+                <div class="process-icon">🎨</div>
+                <h3>Nhân & Hoàn Thiện</h3>
+                <p>Làm nhân ganache, buttercream hoặc confiture, ghép bánh và ủ lạnh 24h để hương vị thấm đều</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gift Box Collection -->
+    <section class="gift-collection" id="giftbox">
+        <div class="section-header">
+            <h2>Gift Box Cao Cấp</h2>
+            <p>Món quà hoàn hảo cho mọi dịp đặc biệt với thiết kế sang trọng và hương vị tinh tế</p>
+        </div>
+
+        <div class="gift-grid">
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="https://images.unsplash.com/photo-1550523331-c3b841cb5f21?q=80&w=700&auto=format&fit=crop"
+                        alt="Luxury Gift Box 24 pieces">
+                </div>
+                <div class="gift-content">
+                    <h3>🎁 Luxury Gift Box - 24 Pieces</h3>
+                    <p>Hộp quà 24 macaron cao cấp với 12 hương vị đặc sắc, đóng gói trong hộp gỗ sang trọng
+                        kèm ribbon lụa và thiệp chúc mừng viết tay.</p>
+
+                    <div class="gift-features">
+                        <div class="gift-feature">Hộp gỗ cao cấp</div>
+                        <div class="gift-feature">12 hương vị đặc biệt</div>
+                        <div class="gift-feature">Ribbon lụa Pháp</div>
+                        <div class="gift-feature">Thiệp viết tay</div>
+                        <div class="gift-feature">Túi xách branded</div>
+                        <div class="gift-feature">Giao hàng miễn phí</div>
+                    </div>
+
+                    <div class="gift-price">650.000đ</div>
+                    <a href="#" class="btn-view-product">Đặt Gift Box →</a>
+                </div>
+            </div>
+
+            <div class="gift-card">
+                <div class="gift-image">
+                    <img src="https://images.unsplash.com/photo-1557925923-bf34f8a72e7e?q=80&w=700&auto=format&fit=crop"
+                        alt="Wedding Gift Tower">
+                </div>
+                <div class="gift-content">
+                    <h3>💐 Wedding Tower - 50 Pieces</h3>
+                    <p>Tháp macaron đám cưới 50 chiếc xếp tầng nghệ thuật, trang trí hoa tươi và ribbon theo
+                        màu sắc đám cưới, centerpiece hoàn hảo.</p>
+
+                    <div class="gift-features">
+                        <div class="gift-feature">Thiết kế tháp 5 tầng</div>
+                        <div class="gift-feature">50 macaron handmade</div>
+                        <div class="gift-feature">Hoa tươi trang trí</div>
+                        <div class="gift-feature">Màu sắc theo yêu cầu</div>
+                        <div class="gift-feature">Setup tại venue</div>
+                        <div class="gift-feature">Mini boxes cho khách</div>
+                    </div>
+
+                    <div class="gift-price">1.850.000đ</div>
+                    <a href="#" class="btn-view-product">Liên Hệ Tư Vấn →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Service -->
+    <section class="customization-section" id="custom">
+        <div class="section-header">
+            <h2>Dịch Vụ Macaron Theo Yêu Cầu</h2>
+            <p>Thiết kế macaron độc quyền cho sự kiện của bạn với màu sắc, hương vị và packaging riêng biệt</p>
+        </div>
+
+        <div class="customization-grid">
+            <div class="custom-card">
+                <div class="custom-icon">🎂</div>
+                <h3>Corporate Branding</h3>
+                <p>Macaron với logo công ty, màu sắc corporate và packaging branded cho sự kiện doanh nghiệp</p>
+                <ul class="custom-features">
+                    <li>In logo công ty lên vỏ macaron</li>
+                    <li>Màu sắc theo brand identity</li>
+                    <li>Hộp đựng branded design</li>
+                    <li>Minimum order: 50 pieces</li>
+                    <li>Consultation miễn phí</li>
+                    <li>Sample box trước khi đặt hàng</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Ngay</a>
+            </div>
+
+            <div class="custom-card">
+                <div class="custom-icon">💍</div>
+                <h3>Wedding Favors</h3>
+                <p>Mini boxes macaron cho khách dự tiệc cưới với thiết kế lãng mạn và tên cô dâu chú rể</p>
+                <ul class="custom-features">
+                    <li>Mini box 2-4 macaron/hộp</li>
+                    <li>Thiết kế theo theme cưới</li>
+                    <li>In tên & ngày cưới</li>
+                    <li>Ribbon & tag matching</li>
+                    <li>Minimum: 30 boxes</li>
+                    <li>Giao hàng & setup tại venue</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Ngay</a>
+            </div>
+
+            <div class="custom-card">
+                <div class="custom-icon">🎨</div>
+                <h3>Custom Flavors</h3>
+                <p>Phát triển hương vị macaron độc quyền riêng cho bạn với nguyên liệu cao cấp</p>
+                <ul class="custom-features">
+                    <li>R&D hương vị độc quyền</li>
+                    <li>Tasting session miễn phí</li>
+                    <li>Điều chỉnh độ ngọt theo yêu cầu</li>
+                    <li>Nguyên liệu organic/halal</li>
+                    <li>Minimum: 100 pieces</li>
+                    <li>Exclusive recipe cho bạn</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Ngay</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Trải Nghiệm Macaron Pháp Chính Hiệu</h2>
+        <p>Đặt hàng ngay và nhận ưu đãi 20% cho đơn hàng đầu tiên + Miễn phí giao hàng</p>
+        <a href="#contact" class="btn-final-cta">Đặt Macaron Ngay 🍰</a>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-modern">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><span class="emoji-icon">🧁</span> Sweet Dreams Bakery</h3>
-                    <p>Tiệm bánh ngọt hàng đầu với hơn 10 năm kinh nghiệm. Chuyên cung cấp các loại bánh ngọt cao cấp được làm tươi mỗi ngày.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">F</a>
-                        <a href="#" aria-label="Instagram">I</a>
-                        <a href="#" aria-label="YouTube">Y</a>
-                        <a href="#" aria-label="TikTok">T</a>
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
+                        <span>Sweet Dreams</span>
+                    </div>
+                    <p class="footer-description">
+                        Tiệm bánh ngọt cao cấp với 10+ năm kinh nghiệm.
+                        Chuyên cung cấp bánh tươi mỗi ngày từ nguyên liệu nhập khẩu.
+                    </p>
+                    <div class="social-links-modern">
+                        <a href="https://www.facebook.com" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Thông Tin Liên Hệ</h3>
-                    <p>📍 123 Đường Nguyễn Văn A, Quận 1, TP.HCM</p>
-                    <p>📞 +84 123 456 789</p>
-                    <p>✉️ hello@sweetdreams.vn</p>
-                    <p>🕒 Mở cửa: 8:00 - 22:00 (T2-CN)</p>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>Số 150, Ngõ 43 Cổ Nhuế<br>Bắc Từ Liêm, Hà Nội</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>0336 981 413</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>vuonghienn20@gmail.com</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <span>8:00 - 22:00 (T2-CN)</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Danh Mục Sản Phẩm</h3>
-                    <p><a href="banh-su-kem.html">Bánh su kem</a></p>
-                    <p><a href="banh-macaron.html">Bánh macaron</a></p>
-                    <p><a href="banh-mi-ngot.html">Bánh mì ngọt</a></p>
-                    <p><a href="banh-bong-lan-cuon.html">Bánh bông lan cuốn</a></p>
-                    <p><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></p>
+
+                <!-- Products Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Sản Phẩm</h3>
+                    <ul class="footer-links">
+                        <li><a href="banh-su-kem.html">Bánh Su Kem</a></li>
+                        <li><a href="banh-macaron.html">Bánh Macaron</a></li>
+                        <li><a href="banh-mi-ngot.html">Bánh Mì Ngọt</a></li>
+                        <li><a href="banh-bong-lan-cuon.html">Bánh Bông Lan Cuốn</a></li>
+                        <li><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></li>
+                    </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Chính Sách</h3>
-                    <p><a href="/chinh-sach-bao-mat">Chính sách bảo mật</a></p>
-                    <p><a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a></p>
-                    <p><a href="/chinh-sach-doi-tra">Chính sách đổi trả</a></p>
-                    <p><a href="/huong-dan-dat-hang">Hướng dẫn đặt hàng</a></p>
+
+                <!-- Links Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Kết</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="blog.html">Blog & Tips</a></li>
+                        <li><a href="#products">Menu</a></li>
+                        <li><a href="#about">Chính Sách</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Sweet Dreams Bakery. Tất cả quyền được bảo lưu.</p>
+
+            <div class="footer-bottom-modern">
+                <p>&copy; 2024 Sweet Dreams Bakery. All rights reserved.</p>
+                <div class="footer-payment">
+                    <span>Chấp nhận thanh toán:</span>
+                    <div class="payment-icons">
+                        <span>💳</span>
+                        <span>🏦</span>
+                        <span>📱</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
+
 </html>

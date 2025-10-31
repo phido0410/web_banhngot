@@ -1,73 +1,138 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bánh Ngọt Hong Kong - Dim Sum & Bánh Tart Trứng | Sweet Dreams</title>
-    <meta name="description" content="Bánh ngọt Hong Kong chính hiệu tại Sweet Dreams - bánh tart trứng, bánh bồ lô bao, bánh dứa. Hương vị đặc trưng Á Đông, làm tươi mỗi ngày. Đặt hàng ngay!">
-    <meta name="keywords" content="bánh ngọt Hong Kong, bánh tart trứng, bánh bồ lô bao, dim sum, bánh dứa Hong Kong, char siu bao">
-    <meta name="author" content="Sweet Dreams Bakery">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Bánh Ngọt Hong Kong - Sweet Dreams Bakery">
-    <meta property="og:description" content="Bánh ngọt Hong Kong chính hiệu với bánh tart trứng, bánh bồ lô bao và dim sum đặc trưng.">
-    <meta property="og:type" content="product">
+    <title>Bánh Ngọt Hong Kong Cao Cấp - Dim Sum Chính Hiệu | Sweet Dreams</title>
+    <meta name="description"
+        content="Khám phá bộ sưu tập bánh ngọt Hong Kong chính hiệu tại Sweet Dreams. Bánh tart trứng, bánh bồ lô bao, dim sum đặc trưng. Nghệ thuật ẩm thực Hương Cảng cho mọi bữa sáng đặc biệt.">
+    <meta name="keywords"
+        content="bánh ngọt Hong Kong, bánh tart trứng, bánh bồ lô bao, dim sum, char siu bao, bánh dứa Hong Kong">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bánh Ngọt Hong Kong Cao Cấp - Sweet Dreams">
+    <meta property="og:description" content="Dim sum và bánh ngọt Hong Kong chính hiệu với hương vị đặc trưng">
+    <meta property="og:image" content="https://web-banhngot.vercel.app/assets/images/hk-pastry-hero.jpg">
     <meta property="og:url" content="https://web-banhngot.vercel.app/banh-ngot-hong-kong">
-    <meta property="og:image" content="https://web-banhngot.vercel.app/assets/images/banh-hong-kong-og.jpg">
-    
-    <!-- Canonical URL -->
+
     <link rel="canonical" href="https://web-banhngot.vercel.app/banh-ngot-hong-kong">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="stylesheet" href="assets/css/modern-redesign.css">
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "CollectionPage",
         "name": "Bánh Ngọt Hong Kong",
-        "description": "Bánh ngọt Hong Kong chính hiệu với đa dạng loại bánh truyền thống",
-        "image": "https://web-banhngot.vercel.app/assets/images/banh-hong-kong.jpg",
-        "brand": {
-            "@type": "Brand",
-            "name": "Sweet Dreams Bakery"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "30000",
-            "priceCurrency": "VND",
-            "availability": "https://schema.org/InStock"
-        }
+        "description": "Bộ sưu tập bánh ngọt Hong Kong chính hiệu với nhiều hương vị độc đáo",
+        "url": "https://web-banhngot.vercel.app/banh-ngot-hong-kong",
+        "image": "https://web-banhngot.vercel.app/assets/images/hk-pastry-collection.jpg"
     }
     </script>
+
+    <style>
+        /* Hong Kong Pastry specific styles only */
+        .hk-pastry-hero {
+            background: linear-gradient(135deg, #FFE5E5 0%, #FFD6D6 100%);
+            height: 70vh;
+            min-height: 500px;
+        }
+
+        /* Responsive overrides if needed */
+        @media (max-width: 768px) {
+            .hk-pastry-hero {
+                height: auto;
+                min-height: 400px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <!-- Logo -->
                 <div class="navbar-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon"><span class="emoji-icon">🧁</span></div>
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
                         <span class="logo-text">Sweet Dreams</span>
                     </a>
                 </div>
-
-                <!-- Navigation Menu -->
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
-                    <li class="nav-item"><a href="banh-su-kem.html" class="nav-link">Bánh su kem</a></li>
-                    <li class="nav-item"><a href="banh-mi-ngot.html" class="nav-link">Bánh mì ngọt</a></li>
-                    <li class="nav-item"><a href="banh-macaron.html" class="nav-link">Bánh macaron</a></li>
-                    <li class="nav-item"><a href="banh-bong-lan-cuon.html" class="nav-link">Bánh bông lan cuốn</a></li>
-                    <li class="nav-item"><a href="banh-ngot-hong-kong.html" class="nav-link active">Bánh Hong Kong</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active">
+                            Sản phẩm
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="banh-su-kem.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥐</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Su Kem</span>
+                                        <span class="dropdown-item-desc">Vỏ giòn, nhân kem mịn</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-mi-ngot.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍞</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Mì Ngọt</span>
+                                        <span class="dropdown-item-desc">Mềm như bông, thơm bơ sữa</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-macaron.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍪</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Macaron</span>
+                                        <span class="dropdown-item-desc">Pháp cao cấp, nhiều vị</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-bong-lan-cuon.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🎂</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Bông Lan Cuốn</span>
+                                        <span class="dropdown-item-desc">Mềm mịn, nhân kem tươi</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-ngot-hong-kong.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥮</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Hong Kong</span>
+                                        <span class="dropdown-item-desc">Tart trứng, bồ lô bao</span>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="cart-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
                 </ul>
-
-                <!-- Hamburger Menu -->
-                <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="hamburger" aria-label="Toggle navigation">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -76,436 +141,409 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title"><span class="emoji-icon">🏮</span> Bánh Hong Kong - Đặc Sản Truyền Thống</h1>
-                <p class="page-subtitle">Bánh Hong Kong truyền thống với hương vị đặc trưng. Từ bánh tart trứng đến bánh bồ lô bao, mang đến trải nghiệm ẩm thực Hong Kong chính thống.</p>
+    <!-- Hero Section -->
+    <section class="category-hero hk-pastry-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <h1>Nghệ Thuật <strong>Bánh Hong Kong</strong> Chính Hiệu</h1>
+                <p class="hero-subtitle">
+                    Từng chiếc bánh tart trứng với lớp custard mịn màng, bánh bồ lô bao giòn tan đặc trưng.
+                    Tinh hoa ẩm thực Hương Cảng được tái hiện trọn vẹn với công thức truyền thống.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#products" class="btn-primary-hero">Khám Phá Bộ Sưu Tập</a>
+                    <a href="#custom" class="btn-secondary-hero">Đặt Bánh Theo Yêu Cầu</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?q=80&w=800&auto=format&fit=crop"
+                    alt="Bánh ngọt Hong Kong cao cấp Sweet Dreams" class="hero-main-image">
             </div>
         </div>
     </section>
 
-    <!-- Breadcrumb Navigation -->
-    <div class="breadcrumb-section">
-        <div class="container">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <ol class="breadcrumb-list">
-                    <li class="breadcrumb-item">
-                        <a href="index.html" class="breadcrumb-link">
-                            <svg class="breadcrumb-home-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                            </svg>
-                            Trang chủ
-                        </a>
-                    </li>
-                    <li class="breadcrumb-separator" aria-hidden="true">›</li>
-                    <li class="breadcrumb-item active" aria-current="page">Bánh Hong Kong</li>
-                </ol>
-            </nav>
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>Mỗi Chiếc Bánh Hong Kong<br><strong>Là Một Tác Phẩm Nghệ Thuật</strong></h2>
+                <p>
+                    Tại Sweet Dreams, chúng tôi không chỉ làm bánh - chúng tôi tái hiện văn hóa ẩm thực Hương Cảng.
+                    Mỗi chiếc bánh được chế tác bằng tình yêu và sự tận tâm, từ việc lựa chọn
+                    nguyên liệu nhập khẩu từ Hong Kong đến kỹ thuật nướng bánh chính hiệu.
+                </p>
+                <p>
+                    Bánh tart trứng với lớp custard mịn như lụa, bánh bồ lô bao giòn tan với lớp vỏ đặc trưng,
+                    dim sum nóng hổi với nhân đậm đà. Đó là cam kết của chúng tôi với từng chiếc bánh gửi đến tay bạn.
+                </p>
+                <p>
+                    Hơn 12 năm kinh nghiệm với sự hợp tác của các thầy bánh Hong Kong, hơn 80,000 chiếc bánh được
+                    yêu thích, Sweet Dreams tự hào là thương hiệu bánh Hong Kong cao cấp hàng đầu tại Việt Nam.
+                </p>
+            </div>
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=600&auto=format&fit=crop"
+                    alt="Quy trình làm bánh Hong Kong cao cấp">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <div class="content">
-                <h1>🏮 Bánh Ngọt Hong Kong - Tinh Hoa Ẩm Thực Đông Phương</h1>
-                
-                <p><strong>Bánh ngọt Hong Kong</strong> tại Sweet Dreams mang đến hương vị đặc trưng của vùng đất Hương Cảng, nơi giao thoa giữa văn hóa Đông - Tây. Từ những chiếc bánh tart trứng béo ngậy đến bánh bồ lô bao giòn tan, mỗi sản phẩm đều được chế biến theo công thức truyền thống kết hợp với kỹ thuật hiện đại, mang đến trải nghiệm ẩm thực Á Đông đích thực.</p>
+    <!-- Product Showcase -->
+    <section class="product-showcase" id="products">
+        <div class="section-header">
+            <h2>Bộ Sưu Tập Đặc Sắc</h2>
+            <p>Từ những hương vị kinh điển đến những sáng tạo độc đáo, mỗi chiếc bánh mang một câu chuyện riêng</p>
+        </div>
 
-                <img src="https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh ngọt Hong Kong đặc trưng tại Sweet Dreams" loading="lazy">
-
-                <h2>🇭🇰 Văn Hóa Bánh Ngọt Hong Kong</h2>
-                
-                <p>Hong Kong không chỉ nổi tiếng với những tòa nhà chọc trời mà còn với nền ẩm thực độc đáo, đặc biệt là các loại <strong>bánh ngọt Hong Kong</strong>. Tại Sweet Dreams, chúng tôi tôn vinh truyền thống này bằng cách tái hiện những công thức bánh cổ điển với nguyên liệu cao cấp và kỹ thuật chính hiệu.</p>
-
-                <h3>🎯 Đặc Trưng Của Bánh Hong Kong</h3>
-                <p>Bánh ngọt Hong Kong có những đặc điểm riêng biệt: vỏ bánh thường giòn bên ngoài, mềm bên trong, nhân bánh đậm đà và ngọt vừa phải. Các loại bánh thường được ăn kèm với trà Trung Hoa, tạo nên văn hóa "yum cha" (饮茶) đặc trưng của người Hong Kong.</p>
-
-                <h3>🏆 Cam Kết Chính Hiệu</h3>
-                <p>Sweet Dreams hợp tác với các thầy bánh từ Hong Kong để đảm bảo mỗi chiếc <strong>bánh ngọt Hong Kong</strong> đều giữ nguyên hương vị truyền thống. Chúng tôi sử dụng nguyên liệu nhập khẩu trực tiếp từ Hong Kong và châu Á để tạo ra những sản phẩm chính hiệu nhất.</p>
-
-                <img src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Thầy bánh Hong Kong chuyên nghiệp tại Sweet Dreams" loading="lazy">
-
-                <h2>🥧 Bộ Sưu Tập Bánh Ngọt Hong Kong Đặc Sắc</h2>
-
-                <p>Sweet Dreams tự hào với bộ sưu tập <strong>bánh ngọt Hong Kong</strong> đa dạng, từ những món quen thuộc đến những sáng tạo độc đáo:</p>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh tart trứng Hong Kong chính hiệu" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Bánh Tart Trứng Classic</h3>
-                            <p class="product-description">Bánh tart trứng chính hiệu Hong Kong với vỏ bánh giòn tan và nhân trứng mịn màng. Được nướng ở nhiệt độ cao tạo lớp caramel đặc trưng trên bề mặt.</p>
-                            <div class="product-price">18.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh bồ lô bao Hong Kong" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Bánh Bồ Lô Bao (Pineapple Bun)</h3>
-                            <p class="product-description">Bánh mì ngọt với lớp vỏ giòn có họa tiết như quả dứa. Không chứa dứa nhưng có hương vị ngọt đặc trưng và texture độc đáo của Hong Kong.</p>
-                            <div class="product-price">22.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh bao xá xíu Hong Kong" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Char Siu Bao (Bánh Bao Xá Xíu)</h3>
-                            <p class="product-description">Bánh bao trắng mềm mịn nhân thịt xá xíu ngọt đậm đà. Thịt heo được ướp theo công thức Hong Kong truyền thống với nước sốt đặc biệt.</p>
-                            <div class="product-price">25.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh cocktail Hong Kong" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Cocktail Bun (Bánh Cocktail)</h3>
-                            <p class="product-description">Bánh mì ngọt nhân dừa và bơ đậu phộng. Tên gọi "cocktail" xuất phát từ sự pha trộn nhiều hương vị trong một chiếc bánh.</p>
-                            <div class="product-price">20.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh lão pó Hong Kong" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Wife Cake (Bánh Lão Pó)</h3>
-                            <p class="product-description">Bánh nướng truyền thống với vỏ bánh mỏng giòn và nhân đậu mung ngọt. Một trong những món bánh cổ điển nhất của Hong Kong.</p>
-                            <div class="product-price">15.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh bao custard Hong Kong" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Custard Bun (Bánh Bao Custard)</h3>
-                            <p class="product-description">Bánh bao vàng mềm mịn với nhân custard béo ngậy chảy ra khi cắn. Một trong những món dim sum được yêu thích nhất.</p>
-                            <div class="product-price">28.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
+        <div class="product-grid-premium">
+            <!-- Product 1 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Bestseller</span>
+                    <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=500&auto=format&fit=crop"
+                        alt="Bánh Tart Trứng Classic">
+                </div>
+                <div class="product-info-premium">
+                    <h3>Bánh Tart Trứng Classic</h3>
+                    <p>Vỏ bánh giòn tan, nhân trứng custard mịn màng với lớp caramel vàng óng đặc trưng</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">18.000đ</span>
+                        <a href="products/banh-tart-trung-classic.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
+            </div>
 
-                <h2>🎨 Bánh Hong Kong Hiện Đại & Fusion</h2>
-                
-                <p>Ngoài các món truyền thống, Sweet Dreams còn sáng tạo những phiên bản hiện đại của <strong>bánh ngọt Hong Kong</strong>, kết hợp hương vị cổ điển với xu hướng bánh ngọt đương đại:</p>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🌈 Rainbow Egg Tart</h3>
-                            <p>Bánh tart trứng với lớp custard đầy màu sắc từ nguyên liệu tự nhiên. Vẫn giữ nguyên hương vị truyền thống nhưng thêm phần thị giác hấp dẫn.</p>
-                            <div class="product-price">25.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🧀 Cheese Pineapple Bun</h3>
-                            <p>Bánh bồ lô bao nhân phô mai cream cheese. Sự kết hợp hoàn hảo giữa vị ngọt truyền thống và độ béo ngậy của cheese.</p>
-                            <div class="product-price">28.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🍓 Fruit Custard Bun</h3>
-                            <p>Bánh bao custard với trái cây tươi như dâu tây, kiwi, xoài. Phiên bản tươi mát cho những ngày hè nóng bức.</p>
-                            <div class="product-price">32.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
+            <!-- Product 2 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Premium</span>
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=500&auto=format&fit=crop"
+                        alt="Bánh Bồ Lô Bao">
+                </div>
+                <div class="product-info-premium">
+                    <h3>Bánh Bồ Lô Bao Premium</h3>
+                    <p>Pineapple bun với lớp vỏ giòn họa tiết dứa, ruột mềm xốp thơm bơ sữa</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">22.000đ</span>
+                        <a href="products/banh-bo-lo-bao.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
+            </div>
 
-                <h2>👨‍🍳 Quy Trình Chế Biến Chính Hiệu</h2>
-                
-                <p>Mỗi loại <strong>bánh ngọt Hong Kong</strong> tại Sweet Dreams đều được chế biến theo quy trình nghiêm ngặt để đảm bảo hương vị chính hiệu:</p>
-
-                <h3>🥧 Bánh Tart Trứng - Quy Trình Đặc Biệt</h3>
-                <ol style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Làm vỏ tart:</strong> Bột mì, bơ và đường được trộn theo tỷ lệ chính xác, ủ lạnh 2 giờ</li>
-                    <li><strong>Chuẩn bị custard:</strong> Trứng, sữa tươi và đường được pha trộn, lọc qua rây mịn</li>
-                    <li><strong>Đổ khuôn:</strong> Custard được đổ vào vỏ tart, không được quá đầy</li>
-                    <li><strong>Nướng 2 lần:</strong> Lần 1 ở 200°C, lần 2 ở 220°C để tạo lớp caramel</li>
-                </ol>
-
-                <h3><span class="emoji-icon">🍞</span> Bánh Bao - Kỹ Thuật Lên Men</h3>
-                <ol style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Pha men:</strong> Men bánh được hoạt hóa trong nước ấm và đường</li>
-                    <li><strong>Nhào bột:</strong> Bột được nhào đến khi mềm mịn, đàn hồi</li>
-                    <li><strong>Lên men lần 1:</strong> Để bột nở gấp đôi trong 1-2 giờ</li>
-                    <li><strong>Tạo hình:</strong> Bọc nhân, tạo hình và lên men lần 2</li>
-                    <li><strong>Hấp chín:</strong> Hấp trong 15-20 phút với hơi nước lớn</li>
-                </ol>
-
-                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Quy trình hấp bánh bao Hong Kong" loading="lazy">
-
-                <h2>🍽️ Combo Dim Sum Đặc Biệt</h2>
-                
-                <p>Sweet Dreams cung cấp các combo <strong>bánh ngọt Hong Kong</strong> theo phong cách dim sum truyền thống:</p>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🏮 Combo Truyền Thống</h3>
-                            <p>6 món classic: 2 bánh tart trứng, 2 bánh bồ lô bao, 1 char siu bao, 1 custard bun. Kèm trà ô long Hong Kong.</p>
-                            <div class="product-price">140.000đ <span style="text-decoration: line-through; color: #999;">160.000đ</span></div>
-                            <button class="product-button">Đặt combo</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>👑 Combo Premium</h3>
-                            <p>8 món cao cấp bao gồm cả bánh truyền thống và hiện đại. Có hộp quà sang trọng và trà đặc biệt.</p>
-                            <div class="product-price">220.000đ <span style="text-decoration: line-through; color: #999;">260.000đ</span></div>
-                            <button class="product-button">Đặt combo</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>👨‍👩‍👧‍👦 Combo Gia Đình</h3>
-                            <p>12 món đa dạng cho 4-6 người. Phù hợp cho bữa tiệc gia đình hoặc họp mặt bạn bè theo phong cách Hong Kong.</p>
-                            <div class="product-price">320.000đ <span style="text-decoration: line-through; color: #999;">384.000đ</span></div>
-                            <button class="product-button">Đặt combo</button>
-                        </div>
-                    </div>
+            <!-- Product 3 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Signature</span>
+                    <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=500&auto=format&fit=crop"
+                        alt="Char Siu Bao">
                 </div>
-
-                <h2>🍵 Văn Hóa Yum Cha & Cách Thưởng Thức</h2>
-                
-                <p>"Yum Cha" (饮茶) là văn hóa uống trà kèm dim sum của người Hong Kong. Tại Sweet Dreams, chúng tôi tái hiện không chỉ hương vị mà còn cả trải nghiệm văn hóa này:</p>
-
-                <h3>🫖 Loại Trà Kết Hợp</h3>
-                <ul style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Ô Long:</strong> Kết hợp hoàn hảo với bánh tart trứng và bánh bồ lô bao</li>
-                    <li><strong>Phổ Nhĩ:</strong> Giúp giảm cảm giác ngán khi ăn bánh có nhiều dầu mỡ</li>
-                    <li><strong>Thiết Quan Âm:</strong> Hương thơm nhẹ nhàng, phù hợp với các loại bánh ngọt</li>
-                    <li><strong>Trà hoa nhài:</strong> Thanh mát, dễ uống, phù hợp với mọi lứa tuổi</li>
-                </ul>
-
-                <h3>⏰ Thời Gian Vàng Thưởng Thức</h3>
-                <p>Theo truyền thống Hong Kong, <strong>bánh ngọt Hong Kong</strong> thường được thưởng thức vào:</p>
-                <ul style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Sáng sớm (7:00-10:00):</strong> Yum cha sáng với bánh tart trứng nóng</li>
-                    <li><strong>Trưa (11:00-14:00):</strong> Dim sum lunch với đa dạng loại bánh</li>
-                    <li><strong>Chiều (15:00-17:00):</strong> Afternoon tea với bánh ngọt và trá</li>
-                    <li><strong>Tối (18:00-21:00):</strong> Dim sum dinner cho gia đình</li>
-                </ul>
-
-                <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Văn hóa yum cha Hong Kong tại Sweet Dreams" loading="lazy">
-
-                <h2>🎎 Nghệ Thuật Trang Trí Bánh Hong Kong</h2>
-                
-                <p>Mỗi loại <strong>bánh ngọt Hong Kong</strong> đều có cách trang trí và trình bày riêng biệt, thể hiện tinh thần thẩm mỹ của ẩm thực Hong Kong:</p>
-
-                <h3>🎨 Bánh Tart Trứng</h3>
-                <p>Bề mặt có lớp caramel vàng óng với những đốm nâu đặc trưng. Viền bánh được tạo hình răng cưa tinh tế, thể hiện tay nghề của thầy bánh.</p>
-
-                <h3>🍍 Bánh Bồ Lô Bao</h3>
-                <p>Lớp vỏ được tạo họa tiết caro giống vỏ quả dứa bằng dao đặc biệt. Màu vàng óng từ lòng đỏ trứng tạo vẻ đẹp hấp dẫn.</p>
-
-                <h3>⚪ Bánh Bao</h3>
-                <p>Hình dáng tròn đều, bề mặt láng mịn không có nếp nhăn. Phần đỉnh bánh được véo thành hình xoắn ốc đặc trưng.</p>
-
-                <h2>📦 Đóng Gói & Bảo Quản Đặc Biệt</h2>
-                
-                <p>Do tính chất đặc biệt của từng loại <strong>bánh ngọt Hong Kong</strong>, Sweet Dreams có phương pháp đóng gói và bảo quản riêng biệt:</p>
-
-                <div style="background: var(--light-pink); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h3>🥧 Bánh Tart Trứng</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Hộp carton chuyên dụng có lỗ thông hơi</li>
-                        <li>Ngăn cách riêng biệt từng chiếc bánh</li>
-                        <li>Bảo quản ở nhiệt độ phòng tối đa 6 giờ</li>
-                        <li>Hâm nóng lại trong lò 2-3 phút trước khi ăn</li>
-                    </ul>
-                    
-                    <h3><span class="emoji-icon">🍞</span> Bánh Bao & Bánh Mì</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Túi giấy thấm ẩm để giữ độ mềm</li>
-                        <li>Hộp foam có lỗ thoáng khí</li>
-                        <li>Bảo quản ngăn mát tủ lạnh 2-3 ngày</li>
-                        <li>Hấp lại 3-5 phút hoặc microwave 30 giây</li>
-                    </ul>
-                </div>
-
-                <h2>💰 Bảng Giá Chi Tiết</h2>
-                
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
-                        <thead>
-                            <tr style="background: var(--primary-color); color: white;">
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Loại Bánh</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Giá lẻ</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Combo 6 chiếc</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Combo 12 chiếc</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Bánh Tart Trứng</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">18.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">100.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">190.000đ</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Bánh Bồ Lô Bao</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">22.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">120.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">230.000đ</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Char Siu Bao</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">25.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">140.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">270.000đ</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Custard Bun</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">28.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">160.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">310.000đ</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <h2>🚚 Dịch Vụ Giao Hàng Chuyên Dụng</h2>
-                
-                <p>Sweet Dreams có dịch vụ giao hàng chuyên dụng cho <strong>bánh ngọt Hong Kong</strong> với những yêu cầu đặc biệt:</p>
-
-                <ul style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Giao nóng:</strong> Bánh tart trứng và bánh bao được giao trong vòng 30 phút</li>
-                    <li><strong>Đóng gói cách nhiệt:</strong> Hộp foam chuyên dụng giữ nhiệt độ</li>
-                    <li><strong>Phí giao hàng:</strong> 20.000đ (Miễn phí từ 200.000đ)</li>
-                    <li><strong>Cam kết chất lượng:</strong> Hoàn tiền 100% nếu bánh nguội hoặc hỏng</li>
-                </ul>
-
-                <h2>🎊 Sự Kiện & Đặt Hàng Số Lượng Lớn</h2>
-                
-                <p>Sweet Dreams nhận đặt <strong>bánh ngọt Hong Kong</strong> cho các sự kiện lớn với dịch vụ chuyên nghiệp:</p>
-
-                <div style="background: var(--accent-color); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h3>🎪 Loại Sự Kiện</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Tiệc cưới với dim sum table</li>
-                        <li>Hội nghị doanh nghiệp</li>
-                        <li>Sinh nhật theo phong cách Hong Kong</li>
-                        <li>Khai trương cửa hàng</li>
-                        <li>Lễ hội văn hóa</li>
-                    </ul>
-                    
-                    <h3>📋 Dịch Vụ Bao Gồm</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Tư vấn menu phù hợp với số lượng khách</li>
-                        <li>Thiết kế bàn tiệc dim sum chuyên nghiệp</li>
-                        <li>Đội ngũ phục vụ tại chỗ (nếu cần)</li>
-                        <li>Dụng cụ ăn uống và trang trí</li>
-                        <li>Giảm giá đặc biệt cho đơn hàng lớn</li>
-                    </ul>
-                </div>
-
-                <h2>📍 Thông Tin Liên Hệ</h2>
-                
-                <div style="background: var(--light-pink); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h3>🏮 Sweet Dreams Hong Kong Corner</h3>
-                    <p><strong>📍 Địa chỉ:</strong> 123 Đường Nguyễn Văn A, Quận 1, TP.HCM</p>
-                    <p><strong>🕒 Giờ phục vụ dim sum:</strong> 7:00 - 21:00 (Thứ 2 - Chủ nhật)</p>
-                    <p><strong>📞 Hotline đặt bánh:</strong> +84 123 456 789</p>
-                    <p><strong>✉️ Email:</strong> hongkong@sweetdreams.vn</p>
-                    <p><strong>🍵 Khu vực yum cha:</strong> 20 chỗ ngồi phong cách Hong Kong</p>
-                    <p><strong>🚗 Parking:</strong> Miễn phí cho khách hàng</p>
-                </div>
-
-                <p>Hãy đến Sweet Dreams để trải nghiệm hương vị đặc trưng của <strong>bánh ngọt Hong Kong</strong>! Chúng tôi không chỉ mang đến những chiếc bánh ngon mà còn tái hiện cả văn hóa ẩm thực phong phú của vùng đất Hương Cảng. Mỗi chiếc bánh đều chứa đựng câu chuyện và truyền thống lâu đời, mang đến trải nghiệm ẩm thực đích thực và đáng nhớ.</p>
-
-                <!-- Internal links -->
-                <div style="margin-top: 3rem; padding: 2rem; background: var(--accent-color); border-radius: 15px;">
-                    <h3>🔗 Khám Phá Thêm Bánh Ngọt Khác</h3>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                        <a href="banh-su-kem.html" class="cta-button">Bánh Su Kem</a>
-                        <a href="banh-macaron.html" class="cta-button">Bánh Macaron</a>
-                        <a href="banh-mi-ngot.html" class="cta-button">Bánh Mì Ngọt</a>
-                        <a href="banh-bong-lan-cuon.html" class="cta-button">Bánh Bông Lan Cuốn</a>
-                        <a href="blog.html" class="cta-button">Blog Bánh Ngọt</a>
+                <div class="product-info-premium">
+                    <h3>Char Siu Bao Signature</h3>
+                    <p>Bánh bao trắng mềm mịn nhân thịt xá xíu ngọt đậm đà theo công thức Hong Kong</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">25.000đ</span>
+                        <a href="products/char-siu-bao.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="section-header">
+            <h2>Quy Trình Làm Bánh Tart Trứng Hoàn Hảo</h2>
+            <p>Mỗi bước được thực hiện với sự tỉ mỉ và chuyên nghiệp bởi đội ngũ pastry chef Hong Kong</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="process-number">1</span>
+                <div class="process-icon">🥧</div>
+                <h3>Làm Vỏ Tart</h3>
+                <p>Bột mì cao cấp, bơ Pháp và đường được trộn theo tỷ lệ chính xác Hong Kong, ủ lạnh 2 giờ để tạo độ
+                    giòn</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">2</span>
+                <div class="process-icon">🥚</div>
+                <h3>Pha Custard</h3>
+                <p>Trứng gà ta tươi, sữa tươi organic và đường được pha trộn cẩn thận, lọc qua rây mịn</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">3</span>
+                <div class="process-icon">🔥</div>
+                <h3>Nướng 2 Lần</h3>
+                <p>Lần 1 ở 200°C để chín custard, lần 2 ở 220°C để tạo lớp caramel vàng ươm đặc trưng</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">4</span>
+                <div class="process-icon">✨</div>
+                <h3>Hoàn Thiện</h3>
+                <p>Làm nguội tự nhiên để giữ nguyên cấu trúc custard, thưởng thức khi còn ấm là ngon nhất</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Collection -->
+    <section class="special-collection">
+        <div class="section-header">
+            <h2>Bộ Sưu Tập Cao Cấp Đặc Biệt</h2>
+            <p>Những món dim sum và bánh ngọt Hong Kong nghệ thuật cho mọi dịp đặc biệt</p>
+        </div>
+
+        <div class="collection-grid">
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?q=80&w=300&auto=format&fit=crop"
+                        alt="Custard Bun">
+                </div>
+                <div class="collection-content">
+                    <h3>🥮 Custard Bun Deluxe</h3>
+                    <p>Bánh bao nhân custard chảy béo ngậy, vỏ bánh mềm mịn với lớp bơ thơm nức. Phải ăn nóng mới cảm
+                        nhận trọn vẹn hương vị.</p>
+                    <div class="collection-price">28.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=300&auto=format&fit=crop"
+                        alt="Pineapple Tart">
+                </div>
+                <div class="collection-content">
+                    <h3>🍍 Pineapple Tart Special</h3>
+                    <p>Bánh tart dứa với nhân mứt dứa tự làm từ dứa tươi Đài Loan, vỏ bánh giòn tan hương bơ đặc trưng.
+                        Vị ngọt thanh tự nhiên.</p>
+                    <div class="collection-price">32.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1517686469429-8bdb88b9f907?q=80&w=300&auto=format&fit=crop"
+                        alt="Red Bean Paste Bun">
+                </div>
+                <div class="collection-content">
+                    <h3>🔴 Red Bean Paste Bun</h3>
+                    <p>Bánh bao nhân đậu đỏ Hokkaido nguyên chất, vỏ bánh trắng mềm mại. Vị ngọt thanh không ngấy, giàu
+                        dinh dưỡng.</p>
+                    <div class="collection-price">26.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=300&auto=format&fit=crop"
+                        alt="Coconut Tart">
+                </div>
+                <div class="collection-content">
+                    <h3>🥥 Coconut Tart Premium</h3>
+                    <p>Bánh tart dừa với nhân dừa tươi nạo sợi và sữa dừa nguyên chất. Vỏ bánh giòn xốp, nhân dừa béo
+                        ngậy thơm ngon tự nhiên.</p>
+                    <div class="collection-price">30.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Service -->
+    <section class="customization-section" id="custom">
+        <div class="section-header">
+            <h2>Dịch Vụ Thiết Kế Bánh Hong Kong Theo Yêu Cầu</h2>
+            <p>Biến ý tưởng của bạn thành hiện thực với dịch vụ customization cao cấp</p>
+        </div>
+
+        <div class="customization-grid">
+            <div class="custom-card">
+                <div class="custom-icon">🍵</div>
+                <h3>Yum Cha Experience</h3>
+                <p>Trải nghiệm văn hóa uống trà Hong Kong authentic tại cửa hàng</p>
+                <ul class="custom-features">
+                    <li>Set dim sum đa dạng (6-10 món)</li>
+                    <li>Trà Trung Hoa cao cấp (Ô Long, Phổ Nhĩ, Tiết Quan Âm)</li>
+                    <li>Không gian ấm cúng phong cách Hong Kong</li>
+                    <li>Bánh nóng vừa ra lò</li>
+                    <li>Phù hợp 2-4 người</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+
+            <div class="custom-card">
+                <div class="custom-icon">📦</div>
+                <h3>Party Catering</h3>
+                <p>Dim sum và bánh Hong Kong cho tiệc, sự kiện với số lượng lớn</p>
+                <ul class="custom-features">
+                    <li>Tư vấn menu phù hợp với sự kiện</li>
+                    <li>Đóng gói hộp sang trọng giữ nhiệt</li>
+                    <li>Giao hàng đúng giờ tận nơi</li>
+                    <li>Setup tại địa điểm (tùy chọn)</li>
+                    <li>Số lượng từ 50 phần trở lên</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+
+            <div class="custom-card">
+                <div class="custom-icon">🎁</div>
+                <h3>Gift Box Premium</h3>
+                <p>Hộp quà bánh Hong Kong cao cấp cho dịp lễ tết, biếu tặng đối tác</p>
+                <ul class="custom-features">
+                    <li>Mix đa dạng: tart trứng, bồ lô bao, dim sum</li>
+                    <li>Hộp gỗ/hộp thiếc cao cấp có thể tái sử dụng</li>
+                    <li>Thiết kế theo yêu cầu (logo, thông điệp)</li>
+                    <li>Kèm trà Trung Hoa hảo hạng</li>
+                    <li>Số lượng từ 10 hộp trở lên</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Sẵn Sàng Cho Trải Nghiệm Hong Kong Authentic?</h2>
+        <p>Đặt hàng ngay hôm nay và nhận ưu đãi 15% cho đơn hàng đầu tiên</p>
+        <a href="#contact" class="btn-final-cta">Đặt Bánh Hong Kong Ngay 🏮</a>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-modern">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><span class="emoji-icon">🧁</span> Sweet Dreams Bakery</h3>
-                    <p>Tiệm bánh ngọt hàng đầu với hơn 10 năm kinh nghiệm. Chuyên cung cấp các loại bánh ngọt cao cấp được làm tươi mỗi ngày.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">F</a>
-                        <a href="#" aria-label="Instagram">I</a>
-                        <a href="#" aria-label="YouTube">Y</a>
-                        <a href="#" aria-label="TikTok">T</a>
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
+                        <span>Sweet Dreams</span>
+                    </div>
+                    <p class="footer-description">
+                        Tiệm bánh ngọt cao cấp với 10+ năm kinh nghiệm.
+                        Chuyên cung cấp bánh tươi mỗi ngày từ nguyên liệu nhập khẩu.
+                    </p>
+                    <div class="social-links-modern">
+                        <a href="https://www.facebook.com" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Thông Tin Liên Hệ</h3>
-                    <p>📍 123 Đường Nguyễn Văn A, Quận 1, TP.HCM</p>
-                    <p>📞 +84 123 456 789</p>
-                    <p>✉️ hello@sweetdreams.vn</p>
-                    <p>🕒 Mở cửa: 8:00 - 22:00 (T2-CN)</p>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>Số 150, Ngõ 43 Cổ Nhuế<br>Bắc Từ Liêm, Hà Nội</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>0336 981 413</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>vuonghienn20@gmail.com</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <span>8:00 - 22:00 (T2-CN)</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Danh Mục Sản Phẩm</h3>
-                    <p><a href="banh-su-kem.html">Bánh su kem</a></p>
-                    <p><a href="banh-macaron.html">Bánh macaron</a></p>
-                    <p><a href="banh-mi-ngot.html">Bánh mì ngọt</a></p>
-                    <p><a href="banh-bong-lan-cuon.html">Bánh bông lan cuốn</a></p>
-                    <p><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></p>
+
+                <!-- Products Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Sản Phẩm</h3>
+                    <ul class="footer-links">
+                        <li><a href="banh-su-kem.html">Bánh Su Kem</a></li>
+                        <li><a href="banh-macaron.html">Bánh Macaron</a></li>
+                        <li><a href="banh-mi-ngot.html">Bánh Mì Ngọt</a></li>
+                        <li><a href="banh-bong-lan-cuon.html">Bánh Bông Lan Cuốn</a></li>
+                        <li><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></li>
+                    </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Chính Sách</h3>
-                    <p><a href="/chinh-sach-bao-mat">Chính sách bảo mật</a></p>
-                    <p><a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a></p>
-                    <p><a href="/chinh-sach-doi-tra">Chính sách đổi trả</a></p>
-                    <p><a href="/huong-dan-dat-hang">Hướng dẫn đặt hàng</a></p>
+
+                <!-- Links Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Kết</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="blog.html">Blog & Tips</a></li>
+                        <li><a href="#products">Menu</a></li>
+                        <li><a href="#about">Chính Sách</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Sweet Dreams Bakery. Tất cả quyền được bảo lưu.</p>
+
+            <div class="footer-bottom-modern">
+                <p>&copy; 2024 Sweet Dreams Bakery. All rights reserved.</p>
+                <div class="footer-payment">
+                    <span>Chấp nhận thanh toán:</span>
+                    <div class="payment-icons">
+                        <span>💳</span>
+                        <span>🏦</span>
+                        <span>📱</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
+
 </html>

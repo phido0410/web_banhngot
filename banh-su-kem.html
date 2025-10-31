@@ -1,73 +1,138 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bánh Su Kem Ngon - Giòn Tan Nhân Kem Tươi | Sweet Dreams</title>
-    <meta name="description" content="Bánh su kem ngon tại Sweet Dreams - vỏ bánh giòn tan, nhân kem tươi đậm đà. Đa dạng hương vị vanilla, chocolate, matcha. Đặt hàng online hoặc đến cửa hàng.">
-    <meta name="keywords" content="bánh su kem, choux cream, bánh su kem ngon, bánh su kem HCM, cream puff, bánh su kem tươi">
-    <meta name="author" content="Sweet Dreams Bakery">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Bánh Su Kem Ngon - Sweet Dreams Bakery">
-    <meta property="og:description" content="Bánh su kem với vỏ giòn tan, nhân kem tươi đậm đà. Đa dạng hương vị từ vanilla đến matcha.">
-    <meta property="og:type" content="product">
+    <title>Bánh Su Kem Cao Cấp - Cream Puff Nghệ Thuật | Sweet Dreams</title>
+    <meta name="description"
+        content="Khám phá bộ sưu tập bánh su kem cao cấp tại Sweet Dreams. Cream puff vỏ giòn tan với nhân kem tươi béo ngậy, hương vị đa dạng. Nghệ thuật làm bánh Pháp cho mọi dịp đặc biệt.">
+    <meta name="keywords"
+        content="bánh su kem, cream puff cao cấp, choux cream, bánh su nhân kem tươi, bánh Pháp, bánh su kem ngon">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bánh Su Kem Cao Cấp - Sweet Dreams">
+    <meta property="og:description" content="Cream puff nghệ thuật với hương vị tinh tế và thiết kế đẹp mắt">
+    <meta property="og:image" content="https://web-banhngot.vercel.app/assets/images/cream-puff-hero.jpg">
     <meta property="og:url" content="https://web-banhngot.vercel.app/banh-su-kem">
-    <meta property="og:image" content="https://web-banhngot.vercel.app/assets/images/banh-su-kem-og.jpg">
-    
-    <!-- Canonical URL -->
+
     <link rel="canonical" href="https://web-banhngot.vercel.app/banh-su-kem">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="stylesheet" href="assets/css/modern-redesign.css">
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "CollectionPage",
         "name": "Bánh Su Kem",
-        "description": "Bánh su kem với vỏ bánh giòn tan và nhân kem tươi đậm đà",
-        "image": "https://web-banhngot.vercel.app/assets/images/banh-su-kem.jpg",
-        "brand": {
-            "@type": "Brand",
-            "name": "Sweet Dreams Bakery"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "25000",
-            "priceCurrency": "VND",
-            "availability": "https://schema.org/InStock"
-        }
+        "description": "Bộ sưu tập cream puff cao cấp với nhiều hương vị độc đáo",
+        "url": "https://web-banhngot.vercel.app/banh-su-kem",
+        "image": "https://web-banhngot.vercel.app/assets/images/cream-puff-collection.jpg"
     }
     </script>
+
+    <style>
+        /* Cream Puff specific styles only */
+        .cream-puff-hero {
+            background: linear-gradient(135deg, #FFF8DC 0%, #FFEFD5 100%);
+            height: 70vh;
+            min-height: 500px;
+        }
+
+        /* Responsive overrides if needed */
+        @media (max-width: 768px) {
+            .cream-puff-hero {
+                height: auto;
+                min-height: 400px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <!-- Logo -->
                 <div class="navbar-brand">
-                    <a href="index.html" class="logo">
-                        <div class="logo-icon"><span class="emoji-icon">🧁</span></div>
+                    <a href="index.html" class="logo" aria-label="Sweet Dreams - Về trang chủ">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
                         <span class="logo-text">Sweet Dreams</span>
                     </a>
                 </div>
-
-                <!-- Navigation Menu -->
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
-                    <li class="nav-item"><a href="banh-su-kem.html" class="nav-link active">Bánh su kem</a></li>
-                    <li class="nav-item"><a href="banh-mi-ngot.html" class="nav-link">Bánh mì ngọt</a></li>
-                    <li class="nav-item"><a href="banh-macaron.html" class="nav-link">Bánh macaron</a></li>
-                    <li class="nav-item"><a href="banh-bong-lan-cuon.html" class="nav-link">Bánh bông lan cuốn</a></li>
-                    <li class="nav-item"><a href="banh-ngot-hong-kong.html" class="nav-link">Bánh Hong Kong</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active">
+                            Sản phẩm
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="banh-su-kem.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥐</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Su Kem</span>
+                                        <span class="dropdown-item-desc">Vỏ giòn, nhân kem mịn</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-mi-ngot.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍞</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Mì Ngọt</span>
+                                        <span class="dropdown-item-desc">Mềm như bông, thơm bơ sữa</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-macaron.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍪</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Macaron</span>
+                                        <span class="dropdown-item-desc">Pháp cao cấp, nhiều vị</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-bong-lan-cuon.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🎂</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Bông Lan Cuốn</span>
+                                        <span class="dropdown-item-desc">Mềm mịn, nhân kem tươi</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-ngot-hong-kong.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥮</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Hong Kong</span>
+                                        <span class="dropdown-item-desc">Tart trứng, bồ lô bao</span>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="cart-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
                 </ul>
-
-                <!-- Hamburger Menu -->
-                <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="hamburger" aria-label="Toggle navigation">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -76,281 +141,412 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title"><span class="emoji-icon">🧁</span> Bánh Su Kem Ngon - Giòn Tan Nhân Kem Tươi</h1>
-                <p class="page-subtitle">Khám phá thế giới bánh ngọt tuyệt vời tại Sweet Dreams! Từ bánh su kem mềm mịn đến macaron màu sắc, chúng tôi mang đến những chiếc bánh ngọt được làm tươi mỗi ngày với tình yêu và sự tận tâm.</p>
+    <!-- Hero Section -->
+    <section class="category-hero cream-puff-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <h1>Nghệ Thuật <strong>Bánh Su Kem</strong> Hoàn Hảo</h1>
+                <p class="hero-subtitle">
+                    Từng chiếc bánh su với vỏ giòn tan như gió, bên trong là nhân kem tươi béo ngậy mịn màng.
+                    Tinh hoa ẩm thực Pháp được tái hiện trọn vẹn với công thức choux pastry truyền thống.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#products" class="btn-primary-hero">Khám Phá Bộ Sưu Tập</a>
+                    <a href="#custom" class="btn-secondary-hero">Đặt Bánh Theo Yêu Cầu</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop"
+                    alt="Bánh su kem cao cấp Sweet Dreams" class="hero-main-image">
             </div>
         </div>
     </section>
 
-    <!-- Breadcrumb Navigation -->
-    <div class="breadcrumb-section">
-        <div class="container">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <ol class="breadcrumb-list">
-                    <li class="breadcrumb-item">
-                        <a href="index.html" class="breadcrumb-link">
-                            <svg class="breadcrumb-home-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                            </svg>
-                            Trang chủ
-                        </a>
-                    </li>
-                    <li class="breadcrumb-separator" aria-hidden="true">›</li>
-                    <li class="breadcrumb-item active" aria-current="page">Bánh su kem</li>
-                </ol>
-            </nav>
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>Mỗi Chiếc Bánh Su Kem<br><strong>Là Một Tác Phẩm Nghệ Thuật</strong></h2>
+                <p>
+                    Tại Sweet Dreams, chúng tôi không chỉ làm bánh - chúng tôi tạo ra những trải nghiệm ẩm thực đỉnh
+                    cao.
+                    Mỗi chiếc bánh su kem được chế tác bằng tình yêu và sự tận tâm, từ việc lựa chọn
+                    nguyên liệu cao cấp Pháp đến kỹ thuật nướng bánh choux pastry hoàn hảo.
+                </p>
+                <p>
+                    Vỏ bánh giòn tan, xốp nhẹ như gió, kem tươi Anchor New Zealand 100%, vanilla Madagascar thơm nức,
+                    chocolate Valrhona Pháp cao cấp. Đó là cam kết của chúng tôi với từng chiếc bánh gửi đến tay bạn.
+                </p>
+                <p>
+                    Hơn 15 năm kinh nghiệm với sự hợp tác của các pastry chef Pháp, hơn 120,000 chiếc bánh được
+                    yêu thích, Sweet Dreams tự hào là thương hiệu cream puff cao cấp hàng đầu tại Việt Nam.
+                </p>
+            </div>
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=600&auto=format&fit=crop"
+                    alt="Quy trình làm bánh su kem cao cấp">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <div class="content">
-                <h1>🍯 Bánh Su Kem Ngon - Giòn Tan Nhân Kem Tươi</h1>
-                
-                <p><strong>Bánh su kem</strong> là một trong những món tráng miệng được yêu thích nhất tại Sweet Dreams. Với vỏ bánh giòn tan đặc trưng và nhân kem tươi béo ngậy, mỗi chiếc bánh su kem của chúng tôi đều được chế biến theo công thức truyền thống kết hợp với kỹ thuật hiện đại, mang đến trải nghiệm vị giác tuyệt vời.</p>
+    <!-- Product Showcase -->
+    <section class="product-showcase" id="products">
+        <div class="section-header">
+            <h2>Bộ Sưu Tập Đặc Sắc</h2>
+            <p>Từ những hương vị kinh điển đến những sáng tạo độc đáo, mỗi chiếc bánh su mang một câu chuyện riêng</p>
+        </div>
 
-                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh su kem ngon với nhiều hương vị tại Sweet Dreams" loading="lazy">
-
-                <h2>🌟 Đặc Điểm Nổi Bật Của Bánh Su Kem Sweet Dreams</h2>
-                
-                <p>Tại Sweet Dreams, chúng tôi tự hào về quy trình sản xuất <strong>bánh su kem</strong> nghiêm ngặt và chất lượng cao. Mỗi chiếc bánh đều được làm thủ công bởi đội ngũ bánh sư giàu kinh nghiệm, đảm bảo hương vị và chất lượng tuyệt hại nhất.</p>
-
-                <h3>🥐 Vỏ Bánh Giòn Tan Hoàn Hảo</h3>
-                <p>Vỏ bánh su kem được làm từ bột mì cao cấp, trứng tươi và bơ nhập khẩu. Quy trình nướng đặc biệt tạo nên lớp vỏ vàng ươm, giòn bên ngoài nhưng mềm mịn bên trong. Độ giòn của vỏ bánh được duy trì trong nhiều giờ nhờ công thức bí mật của Sweet Dreams.</p>
-
-                <h3>🥛 Nhân Kem Tươi Đậm Đà</h3>
-                <p>Nhân kem được làm từ kem tươi 100% nguyên chất, không sử dụng bột kem hay chất tạo hương nhân tạo. Kem được đánh bông mịn màng, có độ ngọt vừa phải và hương thơm tự nhiên. Mỗi chiếc <strong>bánh su kem</strong> được nhồi kem ngay trước khi bán để đảm bảo độ tươi ngon tối đa.</p>
-
-                <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Quy trình làm bánh su kem tại Sweet Dreams" loading="lazy">
-
-                <h2>🎨 Đa Dạng Hương Vị Bánh Su Kem</h2>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh su kem vanilla classic" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Su Kem Vanilla Classic</h3>
-                            <p class="product-description">Hương vị vanilla truyền thống được yêu thích nhất. Kem vanilla được pha chế từ hạt vanilla Madagascar thật, mang đến hương thơm quyến rũ và vị ngọt thanh nhã.</p>
-                            <div class="product-price">25.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1549007174-22e5fa22b2a0?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh su kem chocolate đậm đà" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Su Kem Chocolate Đậm Đà</h3>
-                            <p class="product-description">Dành cho những tín đồ chocolate với nhân kem chocolate Bỉ 70% cacao. Vị đắng nhẹ hòa quyện với độ ngọt của kem tạo nên hương vị độc đáo, khó quên.</p>
-                            <div class="product-price">28.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1607920591413-4ec007e70023?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh su kem matcha Nhật Bản" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Su Kem Matcha Nhật Bản</h3>
-                            <p class="product-description">Matcha nguyên chất từ Uji, Nhật Bản tạo nên hương vị đặc trưng. Vị đắng nhẹ của trà xanh kết hợp với kem tươi béo ngậy, mang đến cảm giác thư giãn tuyệt vời.</p>
-                            <div class="product-price">30.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh su kem dâu tây tươi" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Su Kem Dâu Tây Tươi</h3>
-                            <p class="product-description">Kem dâu tây được làm từ dâu tây Đà Lạt tươi, giữ nguyên hương vị tự nhiên. Màu hồng nhẹ nhàng và vị chua ngọt dễ chịu, phù hợp với mọi lứa tuổi.</p>
-                            <div class="product-price">32.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh su kem sầu riêng cao cấp" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Su Kem Sầu Riêng Cao Cấp</h3>
-                            <p class="product-description">Dành cho những người yêu thích sầu riêng. Sử dụng sầu riêng Ri6 nguyên chất, kem có hương thơm đặc trưng và vị béo ngậy không thể cưỡng lại.</p>
-                            <div class="product-price">35.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1571091655789-405eb7a3a3a8?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh su kem khoai môn tím" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Su Kem Khoai Môn Tím</h3>
-                            <p class="product-description">Hương vị độc đáo từ khoai môn tím Bến Tre. Màu tím nhẹ nhàng, vị ngọt dịu và mùi thơm đặc trưng tạo nên sự khác biệt cho món bánh su kem này.</p>
-                            <div class="product-price">30.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
+        <div class="product-grid-premium">
+            <!-- Product 1 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Bestseller</span>
+                    <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=500&auto=format&fit=crop"
+                        alt="Su Kem Vanilla Classic">
+                </div>
+                <div class="product-info-premium">
+                    <h3>Su Kem Vanilla Classic</h3>
+                    <p>Vỏ choux giòn xốp với nhân kem vanilla Madagascar thơm nức, ngọt thanh nhẹ nhàng</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">25.000đ</span>
+                        <a href="products/su-kem-vanilla-classic.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
+            </div>
 
-                <h2>🏆 Tại Sao Bánh Su Kem Sweet Dreams Được Yêu Thích?</h2>
-                
-                <p>Với hơn 10 năm kinh nghiệm trong lĩnh vực bánh ngọt, Sweet Dreams đã trở thành địa chỉ tin cậy cho những tín đồ <strong>bánh su kem</strong>. Chúng tôi không ngừng cải tiến và sáng tạo để mang đến những sản phẩm chất lượng cao nhất.</p>
-
-                <h3>🌱 Nguyên Liệu Tự Nhiên 100%</h3>
-                <p>Tất cả nguyên liệu đều được chọn lọc kỹ càng từ những nhà cung cấp uy tín. Trứng gà ta tươi, bột mì cao cấp, kem tươi nhập khẩu và các loại hương liệu tự nhiên đảm bảo <strong>bánh su kem</strong> có chất lượng tuyệt vời nhất.</p>
-
-                <h3>⏰ Làm Tươi Mỗi Ngày</h3>
-                <p>Bánh su kem được sản xuất hàng ngày vào buổi sáng sớm. Chúng tôi không bao giờ để bánh qua đêm, đảm bảo khách hàng luôn được thưởng thức những chiếc bánh tươi ngon nhất.</p>
-
-                <h3>👨‍🍳 Đội Ngũ Bánh Sư Chuyên Nghiệp</h3>
-                <p>Đội ngũ bánh sư của Sweet Dreams đều được đào tạo bài bản và có nhiều năm kinh nghiệm. Họ là những người đam mê nghề và không ngừng học hỏi để tạo ra những sản phẩm hoàn hảo nhất.</p>
-
-                <img src="https://images.unsplash.com/photo-1556909114-4097cc40bb5a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Đội ngũ bánh sư chuyên nghiệp làm bánh su kem tại Sweet Dreams" loading="lazy">
-
-                <h2>📦 Combo Bánh Su Kem Ưu Đãi</h2>
-                
-                <p>Sweet Dreams cung cấp nhiều combo <strong>bánh su kem</strong> hấp dẫn với giá ưu đãi, phù hợp cho nhiều dịp khác nhau:</p>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🎁 Combo Gia Đình (6 chiếc)</h3>
-                            <p>6 chiếc bánh su kem đa dạng hương vị: 2 vanilla, 2 chocolate, 1 matcha, 1 strawberry. Hoàn hảo cho bữa tiệc gia đình cuối tuần.</p>
-                            <div class="product-price">140.000đ <span style="text-decoration: line-through; color: #999;">168.000đ</span></div>
-                            <button class="product-button">Đặt combo ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🎉 Combo Tiệc (12 chiếc)</h3>
-                            <p>12 chiếc bánh su kem mix các hương vị hot nhất. Đặc biệt phù hợp cho sinh nhật, tiệc công ty hoặc họp mặt bạn bè.</p>
-                            <div class="product-price">280.000đ <span style="text-decoration: line-through; color: #999;">336.000đ</span></div>
-                            <button class="product-button">Đặt combo ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>💝 Combo Quà Tặng (4 chiếc)</h3>
-                            <p>4 chiếc bánh su kem cao cấp trong hộp quà đẹp mắt. Bao gồm các hương vị đặc biệt như sầu riêng và khoai môn tím.</p>
-                            <div class="product-price">120.000đ <span style="text-decoration: line-through; color: #999;">128.000đ</span></div>
-                            <button class="product-button">Đặt combo ngay</button>
-                        </div>
+            <!-- Product 2 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Premium</span>
+                    <img src="https://images.unsplash.com/photo-1549007174-22e5fa22b2a0?q=80&w=500&auto=format&fit=crop"
+                        alt="Bánh Su Kem Chocolate Đậm Đà">
+                </div>
+                <div class="product-info-premium">
+                    <h3>Bánh Su Kem Chocolate Đậm Đà</h3>
+                    <p>Nhân kem chocolate Bỉ 70% cacao, vị đắng nhẹ hòa quyện độ ngọt hoàn hảo</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">28.000đ</span>
+                        <a href="products/su-kem-chocolate-dam-da.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
+            </div>
 
-                <h2>🚚 Dịch Vụ Giao Hàng Bánh Su Kem</h2>
-                
-                <p>Sweet Dreams cung cấp dịch vụ giao hàng <strong>bánh su kem</strong> tận nơi với cam kết chất lượng và thời gian giao hàng nhanh chóng:</p>
-
-                <ul style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Giao hàng nội thành:</strong> 30-45 phút</li>
-                    <li><strong>Giao hàng ngoại thành:</strong> 60-90 phút</li>
-                    <li><strong>Phí giao hàng:</strong> 20.000đ (Miễn phí cho đơn từ 200.000đ)</li>
-                    <li><strong>Bảo quản:</strong> Thùng foam chuyên dụng, túi gel làm lạnh</li>
-                    <li><strong>Đặt hàng trước:</strong> Chấp nhận đặt hàng trước 1-3 ngày</li>
-                </ul>
-
-                <h2>💡 Mẹo Bảo Quản Bánh Su Kem Tại Nhà</h2>
-                
-                <p>Để thưởng thức <strong>bánh su kem</strong> ngon nhất, hãy tham khảo những mẹo bảo quản sau:</p>
-
-                <ol style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Bảo quản ngắn hạn (2-4 giờ):</strong> Để ở nhiệt độ phòng, tránh ánh nắng trực tiếp</li>
-                    <li><strong>Bảo quản dài hạn:</strong> Cho vào ngăn mát tủ lạnh (0-4°C), không để quá 24 giờ</li>
-                    <li><strong>Trước khi ăn:</strong> Để bánh ở nhiệt độ phòng 5-10 phút để có độ mềm mịn tốt nhất</li>
-                    <li><strong>Không đông lạnh:</strong> Bánh su kem không nên để trong ngăn đá vì sẽ mất độ giòn của vỏ bánh</li>
-                </ol>
-
-                <h2>🏪 Thông Tin Liên Hệ & Đặt Hàng</h2>
-                
-                <p>Để thưởng thức những chiếc <strong>bánh su kem</strong> tuyệt vời của Sweet Dreams, quý khách có thể:</p>
-
-                <div style="background: var(--light-pink); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h3 style="margin-bottom: 1rem;">📞 Hotline Đặt Hàng: +84 123 456 789</h3>
-                    <p><strong>📍 Địa chỉ:</strong> 123 Đường Nguyễn Văn A, Quận 1, TP.HCM</p>
-                    <p><strong>🕒 Giờ mở cửa:</strong> 8:00 - 22:00 (Thứ 2 - Chủ nhật)</p>
-                    <p><strong>✉️ Email:</strong> hello@sweetdreams.vn</p>
-                    <p><strong>🌐 Website:</strong> sweetdreams.vn</p>
+            <!-- Product 3 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Signature</span>
+                    <img src="https://images.unsplash.com/photo-1607920591413-4ec007e70023?q=80&w=500&auto=format&fit=crop"
+                        alt="Bánh Su Kem Matcha Nhật Bản">
                 </div>
-
-                <p>Hãy đến Sweet Dreams để trải nghiệm hương vị tuyệt vời của <strong>bánh su kem</strong> được làm từ tình yêu và sự tận tâm. Chúng tôi cam kết mang đến cho bạn những khoảnh khắc ngọt ngào khó quên!</p>
-
-                <!-- Internal links -->
-                <div style="margin-top: 3rem; padding: 2rem; background: var(--accent-color); border-radius: 15px;">
-                    <h3>🔗 Xem Thêm Sản Phẩm Khác</h3>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                        <a href="banh-macaron.html" class="cta-button">Bánh Macaron</a>
-                        <a href="banh-mi-ngot.html" class="cta-button">Bánh Mì Ngọt</a>
-                        <a href="banh-bong-lan-cuon.html" class="cta-button">Bánh Bông Lan Cuốn</a>
-                        <a href="banh-ngot-hong-kong.html" class="cta-button">Bánh Hong Kong</a>
+                <div class="product-info-premium">
+                    <h3>Bánh Su Kem Matcha Nhật Bản</h3>
+                    <p>Matcha Uji nguyên chất từ Nhật Bản, vị đắng thanh tao hòa quyện kem tươi</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">30.000đ</span>
+                        <a href="products/su-kem-matcha-nhat-ban.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="section-header">
+            <h2>Quy Trình Làm Bánh Su Kem Hoàn Hảo</h2>
+            <p>Mỗi bước được thực hiện với sự tỉ mỉ và chuyên nghiệp bởi đội ngũ pastry chef giàu kinh nghiệm</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="process-number">1</span>
+                <div class="process-icon">🥚</div>
+                <h3>Chuẩn Bị Nguyên Liệu</h3>
+                <p>Tuyển chọn nguyên liệu cao cấp: bột mì Pháp, bơ AOP, trứng gà ta tươi, sữa tươi organic, kem tươi
+                    Anchor New Zealand</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">2</span>
+                <div class="process-icon">🔥</div>
+                <h3>Nấu Bột Choux</h3>
+                <p>Nấu bột choux theo công thức Pháp truyền thống, đảm bảo độ xốp và khả năng nở hoàn hảo khi nướng</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">3</span>
+                <div class="process-icon">🎂</div>
+                <h3>Nướng & Làm Nguội</h3>
+                <p>Nướng ở 200°C trong 25-30 phút để vỏ vàng óng, giòn tan, rỗng bên trong. Làm nguội hoàn toàn trước
+                    khi nhồi kem</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">4</span>
+                <div class="process-icon">✨</div>
+                <h3>Nhồi Kem & Hoàn Thiện</h3>
+                <p>Đánh kem tươi mịn màng, nhồi vào vỏ bánh ngay trước khi bán, trang trí bột đường và chocolate cao cấp
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Collection -->
+    <section class="special-collection">
+        <div class="section-header">
+            <h2>Bộ Sưu Tập Cao Cấp Đặc Biệt</h2>
+            <p>Những chiếc cream puff nghệ thuật dành cho những dịp quan trọng nhất</p>
+        </div>
+
+        <div class="collection-grid">
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=300&auto=format&fit=crop"
+                        alt="Su Kem Dâu Tây">
+                </div>
+                <div class="collection-content">
+                    <h3>🍓 Strawberry Dream Puff</h3>
+                    <p>Bánh su kem với nhân kem tươi vanilla và dâu tây Đà Lạt tươi nguyên trái. Phủ chocolate trắng và
+                        trang trí hoa ăn được.</p>
+                    <div class="collection-price">32.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1549007174-22e5fa22b2a0?q=80&w=300&auto=format&fit=crop"
+                        alt="Su Kem Caramel">
+                </div>
+                <div class="collection-content">
+                    <h3>🍮 Salted Caramel Choux</h3>
+                    <p>Nhân kem caramel muối biển Pháp béo ngậy, phủ sốt caramel đắng và muối biển Guérande. Sự kết hợp
+                        ngọt mặn hoàn hảo.</p>
+                    <div class="collection-price">35.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1607920591413-4ec007e70023?q=80&w=300&auto=format&fit=crop"
+                        alt="Su Kem Earl Grey">
+                </div>
+                <div class="collection-content">
+                    <h3>☕ Earl Grey Cream Puff</h3>
+                    <p>Trà Earl Grey cao cấp pha vào kem tươi, tạo hương thơm tinh tế của bergamot. Trang trí lá trà
+                        vàng ăn được.</p>
+                    <div class="collection-price">33.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1603532648955-039310d9ed75?q=80&w=300&auto=format&fit=crop"
+                        alt="Su Kem Sầu Riêng">
+                </div>
+                <div class="collection-content">
+                    <h3>👑 Musang King Puff</h3>
+                    <p>Sầu riêng Musang King Malaysia nguyên chất xay nhuyễn với kem tươi. Đỉnh cao hương vị cho tín đồ
+                        sầu riêng.</p>
+                    <div class="collection-price">45.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Service -->
+    <section class="customization-section" id="custom">
+        <div class="section-header">
+            <h2>Dịch Vụ Thiết Kế Bánh Su Kem Theo Yêu Cầu</h2>
+            <p>Biến ý tưởng của bạn thành hiện thực với dịch vụ customization cao cấp</p>
+        </div>
+
+        <div class="customization-grid">
+            <div class="custom-card">
+                <div class="custom-icon">🎂</div>
+                <h3>Sinh Nhật & Tiệc Tùng</h3>
+                <p>Croquembouche - tháp bánh su kem Pháp sang trọng cho sinh nhật và sự kiện đặc biệt</p>
+                <ul class="custom-features">
+                    <li>Tháp bánh su từ 50-200 chiếc</li>
+                    <li>Trang trí caramel và hoa tươi cao cấp</li>
+                    <li>Chọn màu sắc và hương vị tùy ý</li>
+                    <li>Có thể in tên, tuổi lên chocolate tag</li>
+                    <li>Giao hàng và setup tại địa điểm</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+
+            <div class="custom-card">
+                <div class="custom-icon">💐</div>
+                <h3>Đám Cưới & Hôn Lễ</h3>
+                <p>Cream puff tower đám cưới với thiết kế romantic và elegant</p>
+                <ul class="custom-features">
+                    <li>Thiết kế theo theme cưới</li>
+                    <li>Trang trí hoa tươi và ren vàng ăn được</li>
+                    <li>Màu pastel lãng mạn hoặc tone classic</li>
+                    <li>Mini cream puff cho khách mời</li>
+                    <li>Số lượng từ 100 phần trở lên</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+
+            <div class="custom-card">
+                <div class="custom-icon">🎪</div>
+                <h3>Sự Kiện & Doanh Nghiệp</h3>
+                <p>Cream puff cao cấp cho workshop, hội nghị, team building với branding</p>
+                <ul class="custom-features">
+                    <li>Đóng hộp sang trọng với logo công ty</li>
+                    <li>Đa dạng vị để lựa chọn</li>
+                    <li>Màu sắc theo corporate identity</li>
+                    <li>Giao hàng punctual và setup chuyên nghiệp</li>
+                    <li>Số lượng lớn (từ 50 phần)</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta" id="contact">
+        <h2>Sẵn Sàng Cho Trải Nghiệm Cream Puff Cao Cấp?</h2>
+        <p>Đặt hàng ngay hôm nay và nhận ưu đãi 20% cho đơn hàng đầu tiên</p>
+        <a href="#contact" class="btn-final-cta">Đặt Bánh Su Kem Ngay 🥐</a>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-modern">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><span class="emoji-icon">🧁</span> Sweet Dreams Bakery</h3>
-                    <p>Tiệm bánh ngọt hàng đầu với hơn 10 năm kinh nghiệm. Chuyên cung cấp các loại bánh ngọt cao cấp được làm tươi mỗi ngày.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">F</a>
-                        <a href="#" aria-label="Instagram">I</a>
-                        <a href="#" aria-label="YouTube">Y</a>
-                        <a href="#" aria-label="TikTok">T</a>
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
+                        <span>Sweet Dreams</span>
+                    </div>
+                    <p class="footer-description">
+                        Tiệm bánh ngọt cao cấp với 10+ năm kinh nghiệm.
+                        Chuyên cung cấp bánh tươi mỗi ngày từ nguyên liệu nhập khẩu.
+                    </p>
+                    <div class="social-links-modern">
+                        <a href="https://www.facebook.com" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Thông Tin Liên Hệ</h3>
-                    <p>📍 123 Đường Nguyễn Văn A, Quận 1, TP.HCM</p>
-                    <p>📞 +84 123 456 789</p>
-                    <p>✉️ hello@sweetdreams.vn</p>
-                    <p>🕒 Mở cửa: 8:00 - 22:00 (T2-CN)</p>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>Số 150, Ngõ 43 Cổ Nhuế<br>Bắc Từ Liêm, Hà Nội</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>0336 981 413</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>vuonghienn20@gmail.com</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <span>8:00 - 22:00 (T2-CN)</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Danh Mục Sản Phẩm</h3>
-                    <p><a href="banh-su-kem.html">Bánh su kem</a></p>
-                    <p><a href="banh-macaron.html">Bánh macaron</a></p>
-                    <p><a href="banh-mi-ngot.html">Bánh mì ngọt</a></p>
-                    <p><a href="banh-bong-lan-cuon.html">Bánh bông lan cuốn</a></p>
-                    <p><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></p>
+
+                <!-- Products Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Sản Phẩm</h3>
+                    <ul class="footer-links">
+                        <li><a href="banh-su-kem.html">Bánh Su Kem</a></li>
+                        <li><a href="banh-macaron.html">Bánh Macaron</a></li>
+                        <li><a href="banh-mi-ngot.html">Bánh Mì Ngọt</a></li>
+                        <li><a href="banh-bong-lan-cuon.html">Bánh Bông Lan Cuốn</a></li>
+                        <li><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></li>
+                    </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Chính Sách</h3>
-                    <p><a href="/chinh-sach-bao-mat">Chính sách bảo mật</a></p>
-                    <p><a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a></p>
-                    <p><a href="/chinh-sach-doi-tra">Chính sách đổi trả</a></p>
-                    <p><a href="/huong-dan-dat-hang">Hướng dẫn đặt hàng</a></p>
+
+                <!-- Links Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Kết</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="blog.html">Blog & Tips</a></li>
+                        <li><a href="#products">Menu</a></li>
+                        <li><a href="#about">Chính Sách</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Sweet Dreams Bakery. Tất cả quyền được bảo lưu.</p>
+
+            <div class="footer-bottom-modern">
+                <p>&copy; 2024 Sweet Dreams Bakery. All rights reserved.</p>
+                <div class="footer-payment">
+                    <span>Chấp nhận thanh toán:</span>
+                    <div class="payment-icons">
+                        <span>💳</span>
+                        <span>🏦</span>
+                        <span>📱</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
+
 </html>

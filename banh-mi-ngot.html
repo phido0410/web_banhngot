@@ -1,73 +1,138 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bánh Mì Ngọt Nhật Bản - Mềm Mịn Thơm Ngon | Sweet Dreams</title>
-    <meta name="description" content="Bánh mì ngọt Nhật Bản tại Sweet Dreams - mềm mịn với nhân đậu đỏ, kem custard, chocolate. Công thức chính hiệu từ Nhật Bản. Đặt hàng online ngay!">
-    <meta name="keywords" content="bánh mì ngọt, bánh mì Nhật Bản, shokupan, melon pan, bánh mì ngọt HCM, japanese bread">
-    <meta name="author" content="Sweet Dreams Bakery">
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Bánh Mì Ngọt Nhật Bản - Sweet Dreams Bakery">
-    <meta property="og:description" content="Bánh mì ngọt kiểu Nhật mềm mịn với đa dạng nhân ngọt từ đậu đỏ đến kem custard.">
-    <meta property="og:type" content="product">
+    <title>Bánh Mì Ngọt Cao Cấp - Artisan Bread | Sweet Dreams</title>
+    <meta name="description"
+        content="Khám phá bộ sưu tập bánh mì ngọt cao cấp tại Sweet Dreams. Bánh mì artisan mềm xốp với nhân đa dạng. Nghệ thuật làm bánh mì Âu chính thống cho mọi bữa sáng đặc biệt.">
+    <meta name="keywords"
+        content="bánh mì ngọt, artisan bread, bánh mì nhân kem, bánh mì sữa, bánh mì bơ sữa, bánh mì Hokkaido">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bánh Mì Ngọt Cao Cấp - Sweet Dreams">
+    <meta property="og:description" content="Bánh mì artisan với hương vị tinh tế và thiết kế đẹp mắt">
+    <meta property="og:image" content="https://web-banhngot.vercel.app/assets/images/sweet-bread-hero.jpg">
     <meta property="og:url" content="https://web-banhngot.vercel.app/banh-mi-ngot">
-    <meta property="og:image" content="https://web-banhngot.vercel.app/assets/images/banh-mi-ngot-og.jpg">
-    
-    <!-- Canonical URL -->
+
     <link rel="canonical" href="https://web-banhngot.vercel.app/banh-mi-ngot">
-    
-    <!-- CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="stylesheet" href="assets/css/modern-redesign.css">
+
     <!-- Schema.org structured data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Product",
+        "@type": "CollectionPage",
         "name": "Bánh Mì Ngọt",
-        "description": "Bánh mì ngọt kiểu Nhật Bản mềm mịn với đa dạng nhân ngọt",
-        "image": "https://web-banhngot.vercel.app/assets/images/banh-mi-ngot.jpg",
-        "brand": {
-            "@type": "Brand",
-            "name": "Sweet Dreams Bakery"
-        },
-        "offers": {
-            "@type": "Offer",
-            "price": "20000",
-            "priceCurrency": "VND",
-            "availability": "https://schema.org/InStock"
-        }
+        "description": "Bộ sưu tập bánh mì ngọt cao cấp với nhiều hương vị độc đáo",
+        "url": "https://web-banhngot.vercel.app/banh-mi-ngot",
+        "image": "https://web-banhngot.vercel.app/assets/images/sweet-bread-collection.jpg"
     }
     </script>
+
+    <style>
+        /* Sweet Bread specific styles only */
+        .sweet-bread-hero {
+            background: linear-gradient(135deg, #FFF4E6 0%, #FFEDCC 100%);
+            height: 70vh;
+            min-height: 500px;
+        }
+
+        /* Responsive overrides if needed */
+        @media (max-width: 768px) {
+            .sweet-bread-hero {
+                height: auto;
+                min-height: 400px;
+            }
+        }
+    </style>
 </head>
+
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <!-- Logo -->
                 <div class="navbar-brand">
                     <a href="index.html" class="logo">
-                        <div class="logo-icon"><span class="emoji-icon">🧁</span></div>
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
                         <span class="logo-text">Sweet Dreams</span>
                     </a>
                 </div>
-
-                <!-- Navigation Menu -->
                 <ul class="nav-menu">
                     <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
-                    <li class="nav-item"><a href="banh-su-kem.html" class="nav-link">Bánh su kem</a></li>
-                    <li class="nav-item"><a href="banh-mi-ngot.html" class="nav-link active">Bánh mì ngọt</a></li>
-                    <li class="nav-item"><a href="banh-macaron.html" class="nav-link">Bánh macaron</a></li>
-                    <li class="nav-item"><a href="banh-bong-lan-cuon.html" class="nav-link">Bánh bông lan cuốn</a></li>
-                    <li class="nav-item"><a href="banh-ngot-hong-kong.html" class="nav-link">Bánh Hong Kong</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active">
+                            Sản phẩm
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="banh-su-kem.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥐</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Su Kem</span>
+                                        <span class="dropdown-item-desc">Vỏ giòn, nhân kem mịn</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-mi-ngot.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍞</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Mì Ngọt</span>
+                                        <span class="dropdown-item-desc">Mềm như bông, thơm bơ sữa</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-macaron.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍪</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Macaron</span>
+                                        <span class="dropdown-item-desc">Pháp cao cấp, nhiều vị</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-bong-lan-cuon.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🎂</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Bông Lan Cuốn</span>
+                                        <span class="dropdown-item-desc">Mềm mịn, nhân kem tươi</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-ngot-hong-kong.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥮</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Hong Kong</span>
+                                        <span class="dropdown-item-desc">Tart trứng, bồ lô bao</span>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="cart-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
                 </ul>
-
-                <!-- Hamburger Menu -->
-                <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                <button class="hamburger" aria-label="Toggle navigation">
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
                     <span class="hamburger-line"></span>
@@ -76,405 +141,409 @@
         </div>
     </header>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <h1 class="page-title"><span class="emoji-icon">🍞</span> Bánh Mì Ngọt - Kiểu Nhật Mềm Mịn</h1>
-                <p class="page-subtitle">Bánh mì ngọt kiểu Nhật mềm mịn với nhân đậu đỏ, kem custard, chocolate. Hoàn hảo cho bữa sáng hoặc afternoon tea.</p>
+    <!-- Hero Section -->
+    <section class="category-hero sweet-bread-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-text-content">
+                <h1>Nghệ Thuật <strong>Bánh Mì Ngọt</strong> Hoàn Hảo</h1>
+                <p class="hero-subtitle">
+                    Từng chiếc bánh mì mềm như bông, thơm nức mùi bơ sữa và hương vani.
+                    Được nướng tươi mỗi ngày với công thức Hokkaido chính thống từ Nhật Bản.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#products" class="btn-primary-hero">Khám Phá Bộ Sưu Tập</a>
+                    <a href="#custom" class="btn-secondary-hero">Đặt Bánh Theo Yêu Cầu</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop"
+                    alt="Bánh mì ngọt cao cấp Sweet Dreams" class="hero-main-image">
             </div>
         </div>
     </section>
 
-    <!-- Breadcrumb Navigation -->
-    <div class="breadcrumb-section">
-        <div class="container">
-            <nav class="breadcrumb" aria-label="Breadcrumb">
-                <ol class="breadcrumb-list">
-                    <li class="breadcrumb-item">
-                        <a href="index.html" class="breadcrumb-link">
-                            <svg class="breadcrumb-home-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-                            </svg>
-                            Trang chủ
-                        </a>
-                    </li>
-                    <li class="breadcrumb-separator" aria-hidden="true">›</li>
-                    <li class="breadcrumb-item active" aria-current="page">Bánh mì ngọt</li>
-                </ol>
-            </nav>
+    <!-- Introduction Section -->
+    <section class="intro-section">
+        <div class="intro-grid">
+            <div class="intro-text">
+                <h2>Mỗi Chiếc Bánh Mì<br><strong>Là Một Tác Phẩm Nghệ Thuật</strong></h2>
+                <p>
+                    Tại Sweet Dreams, chúng tôi không chỉ làm bánh mì - chúng tôi tạo ra những trải nghiệm ẩm thực.
+                    Mỗi chiếc bánh mì ngọt được chế tác bằng tình yêu và sự tận tâm, từ việc lựa chọn
+                    bột mì Nhật Bản cao cấp đến quy trình lên men tự nhiên 12 tiếng.
+                </p>
+                <p>
+                    Bánh mì mềm mịn như bông gòn, bơ Pháp cao cấp, sữa tươi organic 100%, trứng gà ta tươi được
+                    chọn lọc kỹ càng. Đó là cam kết của chúng tôi với từng chiếc bánh gửi đến tay bạn.
+                </p>
+                <p>
+                    Hơn 15 năm kinh nghiệm, hơn 100,000 chiếc bánh mì được yêu thích, Sweet Dreams tự hào
+                    là thương hiệu bánh mì ngọt artisan hàng đầu tại Việt Nam.
+                </p>
+            </div>
+            <div class="intro-image">
+                <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?q=80&w=600&auto=format&fit=crop"
+                    alt="Quy trình làm bánh mì ngọt cao cấp">
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <div class="content">
-                <h1><span class="emoji-icon">🍞</span> Bánh Mì Ngọt Nhật Bản - Mềm Mịn Như Mây</h1>
-                
-                <p><strong>Bánh mì ngọt</strong> kiểu Nhật Bản tại Sweet Dreams mang đến trải nghiệm hoàn toàn khác biệt so với bánh mì truyền thống. Với độ mềm mịn đặc trưng, hương vị ngọt dịu và đa dạng loại nhân hấp dẫn, mỗi chiếc <strong>bánh mì ngọt</strong> đều được chế tác theo công thức chính hiệu từ xứ sở hoa anh đào.</p>
+    <!-- Product Showcase -->
+    <section class="product-showcase" id="products">
+        <div class="section-header">
+            <h2>Bộ Sưu Tập Đặc Sắc</h2>
+            <p>Từ những hương vị kinh điển đến những sáng tạo độc đáo, mỗi chiếc bánh mì mang một câu chuyện riêng</p>
+        </div>
 
-                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh mì ngọt Nhật Bản mềm mịn tại Sweet Dreams" loading="lazy">
-
-                <h2>🎌 Nghệ Thuật Làm Bánh Mì Nhật Bản</h2>
-                
-                <p>Tại Sweet Dreams, chúng tôi áp dụng kỹ thuật làm bánh mì Nhật Bản truyền thống kết hợp với những cải tiến hiện đại. Mỗi chiếc <strong>bánh mì ngọt</strong> đều trải qua quy trình nghiêm ngặt từ lựa chọn nguyên liệu đến khâu nướng hoàn thiện.</p>
-
-                <h3>🌾 Bột Mì Chuyên Dụng Từ Nhật</h3>
-                <p>Chúng tôi sử dụng bột mì bread flour nhập khẩu trực tiếp từ Nhật Bản với hàm lượng protein cao, tạo nên độ dai và mềm mịn đặc trưng. Quy trình ủ bột theo phương pháp tangzhong giúp <strong>bánh mì ngọt</strong> giữ được độ ẩm và mềm mịn trong nhiều ngày.</p>
-
-                <h3>🧈 Phương Pháp Yudane & Tangzhong</h3>
-                <p>Kỹ thuật yudane và tangzhong là bí quyết tạo nên độ mềm mịn không thể cưỡng lại của bánh mì Nhật. Quá trình này giúp bánh có cấu trúc sợi mịn màng, độ ẩm cao và hương vị ngọt tự nhiên từ bột mì.</p>
-
-                <img src="https://images.unsplash.com/photo-1550843912-f69d0ad1fb87?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Phương pháp tangzhong làm bánh mì mềm mịn" loading="lazy">
-
-                <h2>🥐 Bộ Sưu Tập Bánh Mì Ngọt Đặc Sắc</h2>
-
-                <p>Sweet Dreams tự hào với bộ sưu tập <strong>bánh mì ngọt</strong> đa dạng, từ những loại truyền thống cho đến những sáng tạo độc đáo mang hương vị Việt Nam:</p>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh mì dưa vàng Melon Pan" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Melon Pan Classic</h3>
-                            <p class="product-description">Bánh mì dưa vàng nổi tiếng Nhật Bản với lớp vỏ giòn có vân dưa đặc trưng. Nhân kem custard thơm béo kết hợp với hương dưa vàng tự nhiên tạo nên hương vị không thể quên.</p>
-                            <div class="product-price">25.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh mì nhân đậu đỏ Anpan" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Anpan Đậu Đỏ Truyền Thống</h3>
-                            <p class="product-description">Bánh mì nhân đậu đỏ nguyên bản từ Nhật Bản. Đậu đỏ Hokkaido được nấu chín mềm với đường phèn, tạo nên nhân bánh ngọt dịu và thơm béo tự nhiên.</p>
-                            <div class="product-price">22.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1495147466023-ac5c588e2e94?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh mì curry chiên giòn" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Curry Pan Cay Ngọt</h3>
-                            <p class="product-description">Bánh mì nhân curry Nhật Bản được chiên giòn vàng ươm. Nhân curry ngọt với khoai tây, cà rốt và thịt bò, mang hương vị đậm đà và lạ miệng.</p>
-                            <div class="product-price">28.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh mì kem custard mềm mịn" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Cream Pan Custard</h3>
-                            <p class="product-description">Bánh mì mềm mịn với nhân kem custard béo ngậy được làm từ trứng gà ta và vanilla Madagascar. Bề mặt phủ hạt vừng đen tăng thêm hương vị thơm ngon.</p>
-                            <div class="product-price">24.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh mì chocolate xoắn ốc" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Chocolate Spiral</h3>
-                            <p class="product-description">Bánh mì chocolate xoắn ốc với lớp chocolate Bỉ thơm đậm cuốn trong từng lớp bánh. Bề mặt rắc hạt chocolate chip tạo độ giòn hấp dẫn.</p>
-                            <div class="product-price">26.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="https://images.unsplash.com/photo-1607920591413-4ec007e70023?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Bánh mì matcha xoắn ốc xanh" loading="lazy">
-                        </div>
-                        <div class="product-content">
-                            <h3 class="product-title">Matcha Swirl</h3>
-                            <p class="product-description">Bánh mì matcha với họa tiết xoắn ốc màu xanh đẹp mắt. Sử dụng matcha Uji cao cấp tạo nên vị đắng nhẹ đặc trưng kết hợp với kem cheese mịn màng.</p>
-                            <div class="product-price">30.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
+        <div class="product-grid-premium">
+            <!-- Product 1 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Bestseller</span>
+                    <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?q=80&w=500&auto=format&fit=crop"
+                        alt="Melon Pan Classic">
+                </div>
+                <div class="product-info-premium">
+                    <h3>Melon Pan Classic</h3>
+                    <p>Bánh mì dưa vàng Nhật Bản với lớp vỏ cookie giòn tan và nhân kem custard thơm béo</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">25.000đ</span>
+                        <a href="products/melon-pan-classic.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
+            </div>
 
-                <h2>🌟 Điểm Đặc Biệt Của Bánh Mì Ngọt Sweet Dreams</h2>
-                
-                <p>Với niềm đam mê dành cho bánh Nhật Bản, Sweet Dreams đã nghiên cứu và hoàn thiện công thức <strong>bánh mì ngọt</strong> phù hợp với khẩu vị và khí hậu Việt Nam trong suốt 3 năm qua.</p>
-
-                <h3>⏰ Quy Trình Lên Men Tự Nhiên</h3>
-                <p>Bánh mì được lên men tự nhiên trong 12-16 giờ ở nhiệt độ kiểm soát. Quá trình này tạo nên hương vị đặc trưng và độ mềm mịn kéo dài. Men bánh mì được nuôi cấy từ men tự nhiên Nhật Bản, đảm bảo chất lượng và hương vị chuẩn.</p>
-
-                <h3>🥛 Nguyên Liệu Cao Cấp</h3>
-                <p>Sữa tươi Hokkaido, bơ New Zealand, trứng gà ta tươi và đường mía nguyên chất. Tất cả nguyên liệu đều được chọn lọc kỹ càng để tạo nên <strong>bánh mì ngọt</strong> có chất lượng tuyệt hảo nhất.</p>
-
-                <h3>🌡️ Kỹ Thuật Nướng Chuyên Nghiệp</h3>
-                <p>Sử dụng lò nướng hơi nước chuyên dụng từ Nhật Bản với độ ẩm và nhiệt độ được kiểm soát chính xác. Mỗi mẻ bánh chỉ nướng tối đa 20 chiếc để đảm bảo độ đều và chất lượng hoàn hảo.</p>
-
-                <img src="https://images.unsplash.com/photo-1556909114-4097cc40bb5a?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Quy trình nướng bánh mì chuyên nghiệp tại Sweet Dreams" loading="lazy">
-
-                <h2>🥞 Bánh Mì Ngọt Fusion - Hương Vị Việt</h2>
-                
-                <p>Ngoài những món truyền thống, Sweet Dreams còn sáng tạo ra những loại <strong>bánh mì ngọt</strong> mang hương vị Việt Nam độc đáo:</p>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🥥 Bánh Mì Dừa Nướng</h3>
-                            <p>Bánh mì nhân dừa nướng thơm béo với cơm dừa tươi Bến Tre. Bề mặt rắc dừa sấy giòn tạo độ thơm ngon đặc biệt.</p>
-                            <div class="product-price">23.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🌽 Bánh Mì Ngô Phô Mai</h3>
-                            <p>Kết hợp ngô ngọt Đà Lạt và phô mai mozzarella tạo nên hương vị mới lạ. Phù hợp làm món ăn sáng bổ dưỡng.</p>
-                            <div class="product-price">27.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🍠 Bánh Mì Khoai Lang Tím</h3>
-                            <p>Nhân khoai lang tím Đà Lạt ngọt tự nhiên kết hợp với kem cheese. Màu tím đẹp mắt và hương vị độc đáo.</p>
-                            <div class="product-price">25.000đ/chiếc</div>
-                            <button class="product-button">Đặt hàng ngay</button>
-                        </div>
+            <!-- Product 2 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Premium</span>
+                    <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=500&auto=format&fit=crop"
+                        alt="Anpan Đậu Đỏ Truyền Thống">
+                </div>
+                <div class="product-info-premium">
+                    <h3>Anpan Đậu Đỏ Truyền Thống</h3>
+                    <p>Bánh mì truyền thống Nhật Bản với nhân đậu đỏ Hokkaido mịn màng ngọt dịu tự nhiên</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">22.000đ</span>
+                        <a href="products/anpan-dau-do.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
+            </div>
 
-                <h2>📦 Combo Bánh Mì Ngọt Hấp Dẫn</h2>
-                
-                <p>Sweet Dreams cung cấp các combo <strong>bánh mì ngọt</strong> với giá ưu đãi, phù hợp cho gia đình và văn phòng:</p>
-
-                <div class="product-grid">
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🌅 Combo Sáng Năng Lượng</h3>
-                            <p>4 bánh mì ngọt mix: Melon Pan, Anpan, Cream Pan, Chocolate Spiral. Kèm 1 chai sữa đậu nành Nhật Bản. Hoàn hảo cho bữa sáng.</p>
-                            <div class="product-price">95.000đ <span style="text-decoration: line-through; color: #999;">100.000đ</span></div>
-                            <button class="product-button">Đặt combo</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>👨‍👩‍👧‍👦 Combo Gia Đình</h3>
-                            <p>8 bánh mì ngọt đa dạng hương vị cho cả gia đình. Bao gồm các loại truyền thống và fusion. Đóng hộp quà đẹp mắt.</p>
-                            <div class="product-price">180.000đ <span style="text-decoration: line-through; color: #999;">200.000đ</span></div>
-                            <button class="product-button">Đặt combo</button>
-                        </div>
-                    </div>
-
-                    <div class="product-card">
-                        <div class="product-content">
-                            <h3>🏢 Combo Văn Phòng</h3>
-                            <p>12 bánh mì ngọt mix phù hợp cho meeting hoặc tiệc văn phòng. Đa dạng hương vị, dễ ăn và không tanh tay.</p>
-                            <div class="product-price">260.000đ <span style="text-decoration: line-through; color: #999;">288.000đ</span></div>
-                            <button class="product-button">Đặt combo</button>
-                        </div>
-                    </div>
+            <!-- Product 3 -->
+            <div class="product-card-premium">
+                <div class="product-image-premium">
+                    <span class="product-badge">Signature</span>
+                    <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?q=80&w=500&auto=format&fit=crop"
+                        alt="Chocolate Spiral">
                 </div>
-
-                <h2>🕐 Thời Gian Vàng Thưởng Thức</h2>
-                
-                <p><strong>Bánh mì ngọt</strong> Sweet Dreams được sản xuất và nướng tươi mỗi ngày theo các khung giờ cụ thể để đảm bảo chất lượng tốt nhất:</p>
-
-                <div style="background: var(--light-pink); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h3>📅 Lịch Nướng Bánh Hàng Ngày</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li><strong>6:00 - 7:00:</strong> Mẻ đầu - Anpan, Cream Pan, Melon Pan</li>
-                        <li><strong>9:00 - 10:00:</strong> Mẻ hai - Chocolate Spiral, Matcha Swirl</li>
-                        <li><strong>14:00 - 15:00:</strong> Mẻ ba - Curry Pan, các loại fusion</li>
-                        <li><strong>17:00 - 18:00:</strong> Mẻ cuối - Mix các loại theo đơn đặt</li>
-                    </ul>
-                    
-                    <h3>⭐ Khuyến Nghị Thưởng Thức</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Bánh tươi nhất: 2-4 giờ sau khi nướng</li>
-                        <li>Bảo quản: Nhiệt độ phòng tối đa 24 giờ</li>
-                        <li>Hâm nóng: 30 giây microwave hoặc 2 phút lò nướng 150°C</li>
-                    </ul>
-                </div>
-
-                <h2>🥛 Đồ Uống Kết Hợp Hoàn Hảo</h2>
-                
-                <p>Để tăng thêm trải nghiệm thưởng thức <strong>bánh mì ngọt</strong>, Sweet Dreams gợi ý các loại đồ uống kết hợp tuyệt vời:</p>
-
-                <ul style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Với Melon Pan:</strong> Trà xanh hoặc sữa đậu nành vanilla</li>
-                    <li><strong>Với Anpan:</strong> Trà đen Earl Grey hoặc café đen</li>
-                    <li><strong>Với Curry Pan:</strong> Sữa tươi lạnh hoặc trà sữa</li>
-                    <li><strong>Với Chocolate Spiral:</strong> Sữa chocolate nóng hoặc café latte</li>
-                    <li><strong>Với Matcha Swirl:</strong> Trà matcha latte hoặc nước detox</li>
-                </ul>
-
-                <h2>🏪 Hệ Thống Cửa Hàng & Đặt Hàng</h2>
-                
-                <p>Sweet Dreams có hệ thống cửa hàng và dịch vụ giao hàng tận nơi, giúp bạn dễ dàng thưởng thức <strong>bánh mì ngọt</strong> mọi lúc mọi nơi:</p>
-
-                <h3>🏬 Cửa Hàng Chính</h3>
-                <div style="background: var(--accent-color); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <p><strong>📍 Địa chỉ:</strong> 123 Đường Nguyễn Văn A, Quận 1, TP.HCM</p>
-                    <p><strong>🕒 Giờ mở cửa:</strong> 6:00 - 22:00 (Thứ 2 - Chủ nhật)</p>
-                    <p><strong>📞 Hotline:</strong> +84 123 456 789</p>
-                    <p><strong>🎯 Đặc biệt:</strong> Có khu vực ngồi thưởng thức tại chỗ</p>
-                </div>
-
-                <h3>🚚 Dịch Vụ Giao Hàng</h3>
-                <ul style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Giao nhanh:</strong> 30-45 phút trong bán kính 5km</li>
-                    <li><strong>Đặt trước:</strong> Chấp nhận đặt bánh trước 2-24 giờ</li>
-                    <li><strong>Phí ship:</strong> 15.000đ (Miễn phí từ 150.000đ)</li>
-                    <li><strong>Đóng gói:</strong> Hộp kraft thân thiện môi trường</li>
-                </ul>
-
-                <h2>💡 Mẹo Bảo Quản Bánh Mì Ngọt</h2>
-                
-                <p>Để <strong>bánh mì ngọt</strong> luôn giữ được độ mềm mịn và hương vị tốt nhất:</p>
-
-                <ol style="padding-left: 2rem; margin: 1rem 0;">
-                    <li><strong>Bảo quản ngắn hạn:</strong> Cho vào túi nilon hoặc hộp kín ở nhiệt độ phòng</li>
-                    <li><strong>Bảo quản dài hạn:</strong> Đặt trong ngăn mát tủ lạnh (0-4°C), tối đa 3 ngày</li>
-                    <li><strong>Hâm nóng:</strong> Microwave 20-30 giây hoặc lò nướng 150°C trong 2-3 phút</li>
-                    <li><strong>Đông lạnh:</strong> Có thể đông lạnh tối đa 1 tháng, rã đông tự nhiên trước khi ăn</li>
-                    <li><strong>Tránh:</strong> Để ở nơi có ánh nắng trực tiếp hoặc nhiệt độ quá cao</li>
-                </ol>
-
-                <h2><span class="emoji-icon">🎂</span> Dịch Vụ Bánh Mì Ngọt Theo Yêu Cầu</h2>
-                
-                <p>Sweet Dreams nhận đặt làm <strong>bánh mì ngọt</strong> theo yêu cầu cho các sự kiện đặc biệt:</p>
-
-                <div style="background: var(--mint); padding: 2rem; border-radius: 15px; margin: 2rem 0;">
-                    <h3>🎨 Customization Service</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Thiết kế hình dáng và màu sắc theo yêu cầu</li>
-                        <li>Tạo nhân bánh theo hương vị mong muốn</li>
-                        <li>In logo hoặc tên trên bánh (đối với đơn hàng lớn)</li>
-                        <li>Đóng gói gift box sang trọng</li>
-                        <li>Tư vấn miễn phí và báo giá chi tiết</li>
-                    </ul>
-                    
-                    <h3>📋 Điều Kiện Đặt Hàng</h3>
-                    <ul style="padding-left: 2rem;">
-                        <li>Số lượng tối thiểu: 20 chiếc</li>
-                        <li>Thời gian đặt trước: 3-5 ngày</li>
-                        <li>Đặt cọc: 50% giá trị đơn hàng</li>
-                        <li>Tư vấn thiết kế: Miễn phí</li>
-                    </ul>
-                </div>
-
-                <h2>📊 Bảng Giá Chi Tiết</h2>
-                
-                <div style="overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; margin: 2rem 0;">
-                        <thead>
-                            <tr style="background: var(--primary-color); color: white;">
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Loại Bánh</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Giá lẻ</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Combo 4 chiếc</th>
-                                <th style="padding: 1rem; border: 1px solid #ddd;">Combo 8 chiếc</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Bánh truyền thống</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">22.000 - 25.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">88.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">168.000đ</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Bánh premium</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">26.000 - 30.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">100.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">190.000đ</td>
-                            </tr>
-                            <tr>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">Bánh fusion Việt</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">23.000 - 27.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">92.000đ</td>
-                                <td style="padding: 1rem; border: 1px solid #ddd;">175.000đ</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <p>Hãy đến Sweet Dreams để trải nghiệm hương vị tuyệt vời của <strong>bánh mì ngọt</strong> Nhật Bản! Mỗi chiếc bánh không chỉ mang đến sự no bụng mà còn là niềm vui cho tâm hồn. Chúng tôi cam kết mang đến những sản phẩm chất lượng cao nhất với giá cả hợp lý.</p>
-
-                <!-- Internal links -->
-                <div style="margin-top: 3rem; padding: 2rem; background: var(--accent-color); border-radius: 15px;">
-                    <h3>🔗 Khám Phá Thêm Bánh Ngọt Khác</h3>
-                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                        <a href="banh-su-kem.html" class="cta-button">Bánh Su Kem</a>
-                        <a href="banh-macaron.html" class="cta-button">Bánh Macaron</a>
-                        <a href="banh-bong-lan-cuon.html" class="cta-button">Bánh Bông Lan Cuốn</a>
-                        <a href="banh-ngot-hong-kong.html" class="cta-button">Bánh Hong Kong</a>
-                        <a href="blog.html" class="cta-button">Blog Bánh Ngọt</a>
+                <div class="product-info-premium">
+                    <h3>Chocolate Spiral</h3>
+                    <p>Bánh mì chocolate xoắn ốc Bỉ với chocolate Callebaut 70% cao cấp</p>
+                    <div class="product-footer">
+                        <span class="product-price-premium">26.000đ</span>
+                        <a href="products/chocolate-spiral.html" class="btn-view-product">Xem Chi Tiết</a>
                     </div>
                 </div>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="section-header">
+            <h2>Quy Trình Làm Bánh Mì Hoàn Hảo</h2>
+            <p>Mỗi bước được thực hiện với sự tỉ mỉ và chuyên nghiệp bởi đội ngũ baker giàu kinh nghiệm</p>
+        </div>
+
+        <div class="process-grid">
+            <div class="process-step">
+                <span class="process-number">1</span>
+                <div class="process-icon">🌾</div>
+                <h3>Chuẩn Bị Nguyên Liệu</h3>
+                <p>Tuyển chọn nguyên liệu cao cấp: bột mì Nhật Bản, bơ Pháp President, sữa tươi organic, trứng gà ta,
+                    men tươi nhập khẩu</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">2</span>
+                <div class="process-icon">🥖</div>
+                <h3>Nhào & Lên Men</h3>
+                <p>Nhào bột bằng máy chuyên dụng 30 phút, ủ men tự nhiên 12 tiếng đạt độ xốp mềm hoàn hảo</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">3</span>
+                <div class="process-icon">🔥</div>
+                <h3>Nướng Bánh</h3>
+                <p>Nướng ở nhiệt độ 180°C trong 18-20 phút để vỏ vàng óng, ruột mềm xốp như bông</p>
+            </div>
+
+            <div class="process-step">
+                <span class="process-number">4</span>
+                <div class="process-icon">✨</div>
+                <h3>Hoàn Thiện</h3>
+                <p>Phết bơ mặn lên bề mặt khi bánh còn nóng, tạo lớp vỏ bóng đẹp mắt và thơm nức</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Collection -->
+    <section class="special-collection">
+        <div class="section-header">
+            <h2>Bộ Sưu Tập Cao Cấp Đặc Biệt</h2>
+            <p>Những chiếc bánh mì ngọt nghệ thuật dành cho những bữa sáng đặc biệt nhất</p>
+        </div>
+
+        <div class="collection-grid">
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=300&auto=format&fit=crop"
+                        alt="Bánh Mì Sô-cô-la Matcha">
+                </div>
+                <div class="collection-content">
+                    <h3>🍵 Matcha Chocolate Swirl</h3>
+                    <p>Bánh mì hai màu xoắn ốc matcha Uji và chocolate Valrhona 70%, nhân kem cheese mascarpone. Vẻ đẹp
+                        nghệ thuật trong từng lát cắt.</p>
+                    <div class="collection-price">55.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=300&auto=format&fit=crop"
+                        alt="Bánh Mì Trà Sữa Trân Châu">
+                </div>
+                <div class="collection-content">
+                    <h3>🧋 Bubble Tea Bread</h3>
+                    <p>Bánh mì hương trà sữa Earl Grey với nhân kem cheese và trân châu đen chewy. Sự kết hợp độc đáo
+                        giữa Đông Tây.</p>
+                    <div class="collection-price">52.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?q=80&w=300&auto=format&fit=crop"
+                        alt="Bánh Mì Hoa Lavender">
+                </div>
+                <div class="collection-content">
+                    <h3>💜 Lavender Dream</h3>
+                    <p>Bánh mì hoa oải hương Pháp với nhân kem vanilla và mật ong hoa organic. Hương thơm dịu nhẹ, thư
+                        giãn tâm hồn.</p>
+                    <div class="collection-price">58.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+
+            <div class="collection-card">
+                <div class="collection-image">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=300&auto=format&fit=crop"
+                        alt="Bánh Mì Ube Purple">
+                </div>
+                <div class="collection-content">
+                    <h3>💜 Ube Purple Twist</h3>
+                    <p>Bánh mì khoai mỡ tím Philippines với nhân kem cheese và topping bột phô mai. Màu tím mộng mơ, vị
+                        ngọt tự nhiên.</p>
+                    <div class="collection-price">50.000đ/chiếc</div>
+                    <a href="#" class="btn-view-product">Đặt Hàng Ngay</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Service -->
+    <section class="customization-section" id="custom">
+        <div class="section-header">
+            <h2>Dịch Vụ Thiết Kế Bánh Mì Theo Yêu Cầu</h2>
+            <p>Biến ý tưởng của bạn thành hiện thực với dịch vụ customization cao cấp</p>
+        </div>
+
+        <div class="customization-grid">
+            <div class="custom-card">
+                <div class="custom-icon">🎂</div>
+                <h3>Sinh Nhật & Tiệc Trẻ Em</h3>
+                <p>Bánh mì mini cute với nhiều hình dạng và màu sắc vui nhộn cho tiệc sinh nhật bé yêu</p>
+                <ul class="custom-features">
+                    <li>Bánh mì mini nhiều hình dạng: gấu, thỏ, chim...</li>
+                    <li>Màu sắc tự nhiên từ rau củ quả</li>
+                    <li>Nhân ngọt tùy chọn (chocolate, kem, mứt)</li>
+                    <li>Đóng gói hộp quà xinh xắn</li>
+                    <li>Số lượng từ 20 chiếc trở lên</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+
+            <div class="custom-card">
+                <div class="custom-icon">☕</div>
+                <h3>Cà Phê & Nhà Hàng</h3>
+                <p>Cung cấp bánh mì tươi mỗi ngày cho quán cà phê, nhà hàng với giá ưu đãi đặc biệt</p>
+                <ul class="custom-features">
+                    <li>Giao hàng tươi mỗi ngày từ 6h sáng</li>
+                    <li>Đa dạng loại bánh mì (Hokkaido, Brioche, Croissant)</li>
+                    <li>Giá sỉ hấp dẫn (từ 50 chiếc/ngày)</li>
+                    <li>Có thể in logo shop lên bao bì</li>
+                    <li>Hỗ trợ menu và training nhân viên</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+
+            <div class="custom-card">
+                <div class="custom-icon">🎪</div>
+                <h3>Sự Kiện & Doanh Nghiệp</h3>
+                <p>Bánh mì cao cấp cho hội nghị, workshop, team building với branding độc quyền</p>
+                <ul class="custom-features">
+                    <li>Bánh mì premium đóng hộp sang trọng</li>
+                    <li>In logo công ty lên bao bì</li>
+                    <li>Đa dạng vị để lựa chọn</li>
+                    <li>Giao hàng tận nơi, setup tại event</li>
+                    <li>Số lượng lớn (từ 100 chiếc)</li>
+                </ul>
+                <a href="#contact" class="btn-view-product">Liên Hệ Tư Vấn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>Sẵn Sàng Cho Trải Nghiệm Bánh Mì Cao Cấp?</h2>
+        <p>Đặt hàng ngay hôm nay và nhận ưu đãi 20% cho đơn hàng đầu tiên</p>
+        <a href="#contact" class="btn-final-cta">Đặt Bánh Mì Ngay 🥖</a>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer-modern">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3><span class="emoji-icon">🧁</span> Sweet Dreams Bakery</h3>
-                    <p>Tiệm bánh ngọt hàng đầu với hơn 10 năm kinh nghiệm. Chuyên cung cấp các loại bánh ngọt cao cấp được làm tươi mỗi ngày.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Facebook">F</a>
-                        <a href="#" aria-label="Instagram">I</a>
-                        <a href="#" aria-label="YouTube">Y</a>
-                        <a href="#" aria-label="TikTok">T</a>
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
+                        <span>Sweet Dreams</span>
+                    </div>
+                    <p class="footer-description">
+                        Tiệm bánh ngọt cao cấp với 10+ năm kinh nghiệm.
+                        Chuyên cung cấp bánh tươi mỗi ngày từ nguyên liệu nhập khẩu.
+                    </p>
+                    <div class="social-links-modern">
+                        <a href="https://www.facebook.com" class="social-link" aria-label="Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com" class="social-link" aria-label="Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="TikTok">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Thông Tin Liên Hệ</h3>
-                    <p>📍 123 Đường Nguyễn Văn A, Quận 1, TP.HCM</p>
-                    <p>📞 +84 123 456 789</p>
-                    <p>✉️ hello@sweetdreams.vn</p>
-                    <p>🕒 Mở cửa: 8:00 - 22:00 (T2-CN)</p>
+
+                <!-- Contact Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>Số 150, Ngõ 43 Cổ Nhuế<br>Bắc Từ Liêm, Hà Nội</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>0336 981 413</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <path
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                                    stroke="currentColor" stroke-width="2" />
+                            </svg>
+                            <span>vuonghienn20@gmail.com</span>
+                        </li>
+                        <li>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                            <span>8:00 - 22:00 (T2-CN)</span>
+                        </li>
+                    </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Danh Mục Sản Phẩm</h3>
-                    <p><a href="banh-su-kem.html">Bánh su kem</a></p>
-                    <p><a href="banh-macaron.html">Bánh macaron</a></p>
-                    <p><a href="banh-mi-ngot.html">Bánh mì ngọt</a></p>
-                    <p><a href="banh-bong-lan-cuon.html">Bánh bông lan cuốn</a></p>
-                    <p><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></p>
+
+                <!-- Products Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Sản Phẩm</h3>
+                    <ul class="footer-links">
+                        <li><a href="banh-su-kem.html">Bánh Su Kem</a></li>
+                        <li><a href="banh-macaron.html">Bánh Macaron</a></li>
+                        <li><a href="banh-mi-ngot.html">Bánh Mì Ngọt</a></li>
+                        <li><a href="banh-bong-lan-cuon.html">Bánh Bông Lan Cuốn</a></li>
+                        <li><a href="banh-ngot-hong-kong.html">Bánh Hong Kong</a></li>
+                    </ul>
                 </div>
-                
-                <div class="footer-section">
-                    <h3>Chính Sách</h3>
-                    <p><a href="/chinh-sach-bao-mat">Chính sách bảo mật</a></p>
-                    <p><a href="/dieu-khoan-su-dung">Điều khoản sử dụng</a></p>
-                    <p><a href="/chinh-sach-doi-tra">Chính sách đổi trả</a></p>
-                    <p><a href="/huong-dan-dat-hang">Hướng dẫn đặt hàng</a></p>
+
+                <!-- Links Column -->
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Kết</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="blog.html">Blog & Tips</a></li>
+                        <li><a href="#products">Menu</a></li>
+                        <li><a href="#about">Chính Sách</a></li>
+                        <li><a href="#contact">Liên Hệ</a></li>
+                    </ul>
                 </div>
             </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2024 Sweet Dreams Bakery. Tất cả quyền được bảo lưu.</p>
+
+            <div class="footer-bottom-modern">
+                <p>&copy; 2024 Sweet Dreams Bakery. All rights reserved.</p>
+                <div class="footer-payment">
+                    <span>Chấp nhận thanh toán:</span>
+                    <div class="payment-icons">
+                        <span>💳</span>
+                        <span>🏦</span>
+                        <span>📱</span>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
 </body>
+
 </html>

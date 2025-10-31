@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Sweet Dreams Bakery</title>
+    <meta name="description" content="Giỏ hàng của bạn tại Sweet Dreams - Tiệm bánh ngọt cao cấp">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/modern-redesign.css">
+    <link rel="stylesheet" href="assets/css/product-page.css">
+
+    <style>
+        .cart-page {
+            padding: 3rem 0;
+            min-height: 70vh;
+        }
+
+        .cart-empty {
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .cart-empty-icon {
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+
+        .cart-empty h2 {
+            font-size: 1.75rem;
+            color: #1F2937;
+            margin-bottom: 1rem;
+        }
+
+        .cart-empty p {
+            color: #6B7280;
+            margin-bottom: 2rem;
+        }
+
+        .cart-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 2rem;
+        }
+
+        .cart-items {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .cart-item {
+            display: grid;
+            grid-template-columns: 100px 1fr auto;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-info h3 {
+            font-size: 1.1rem;
+            color: #1F2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .cart-item-price {
+            color: #E11D48;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .cart-item-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cart-qty-selector {
+            display: flex;
+            align-items: center;
+            border: 2px solid #E5E7EB;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .cart-qty-btn {
+            width: 35px;
+            height: 35px;
+            border: none;
+            background: #F9FAFB;
+            color: #E11D48;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .cart-qty-btn:hover {
+            background: #E11D48;
+            color: white;
+        }
+
+        .cart-qty-input {
+            width: 40px;
+            height: 35px;
+            border: none;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: #DC2626;
+            cursor: pointer;
+            padding: 0.5rem;
+            font-size: 1.25rem;
+            transition: all 0.2s ease;
+        }
+
+        .cart-item-remove:hover {
+            transform: scale(1.2);
+        }
+
+        .cart-item-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 1rem;
+        }
+
+        .cart-item-total {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1F2937;
+        }
+
+        .cart-summary {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            height: fit-content;
+            position: sticky;
+            top: 100px;
+        }
+
+        .cart-summary h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #1F2937;
+        }
+
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            color: #4B5563;
+        }
+
+        .summary-row.total {
+            border-top: 2px solid #E5E7EB;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1F2937;
+        }
+
+        .summary-row.total .price {
+            color: #E11D48;
+            font-size: 1.5rem;
+        }
+
+        .btn-checkout {
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, #E11D48 0%, #BE123C 100%);
+            border: none;
+            color: white;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-checkout:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(225, 29, 72, 0.4);
+        }
+
+        .btn-continue {
+            width: 100%;
+            padding: 1rem;
+            background: white;
+            border: 2px solid #E11D48;
+            color: #E11D48;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-continue:hover {
+            background: #FFF1F2;
+        }
+
+        @media (max-width: 1024px) {
+            .cart-content {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-summary {
+                position: relative;
+                top: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cart-item {
+                grid-template-columns: 80px 1fr;
+                gap: 1rem;
+            }
+
+            .cart-item-actions {
+                grid-column: 1 / -1;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .cart-item-image {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="navbar-brand">
+                    <a href="index.html" class="logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
+                        <span class="logo-text">Sweet Dreams</span>
+                    </a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item has-dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">
+                            Sản phẩm
+                            <svg class="dropdown-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                <path d="M2.5 4.5L6 8L9.5 4.5" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="banh-su-kem.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥐</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Su Kem</span>
+                                        <span class="dropdown-item-desc">Vỏ giòn, nhân kem mịn</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-mi-ngot.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍞</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Mì Ngọt</span>
+                                        <span class="dropdown-item-desc">Mềm như bông, thơm bơ sữa</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-macaron.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🍪</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Macaron</span>
+                                        <span class="dropdown-item-desc">Pháp cao cấp, nhiều vị</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-bong-lan-cuon.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🎂</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Bông Lan Cuốn</span>
+                                        <span class="dropdown-item-desc">Mềm mịn, nhân kem tươi</span>
+                                    </div>
+                                </a></li>
+                            <li><a href="banh-ngot-hong-kong.html" class="dropdown-item">
+                                    <span class="dropdown-icon-wrapper">🥮</span>
+                                    <div class="dropdown-item-content">
+                                        <span class="dropdown-item-title">Bánh Hong Kong</span>
+                                        <span class="dropdown-item-desc">Tart trứng, bồ lô bao</span>
+                                    </div>
+                                </a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item">
+                        <a href="cart.html" class="cart-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+                            </svg>
+                            <span class="cart-count" style="display: none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+                <button class="hamburger" aria-label="Toggle navigation">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Page -->
+    <main class="cart-page">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; margin-bottom: 2rem; color: #1F2937;">🛒 Giỏ Hàng Của Bạn</h1>
+
+            <!-- Empty Cart -->
+            <div class="cart-empty" id="cartEmpty" style="display: none;">
+                <div class="cart-empty-icon">🛒</div>
+                <h2>Giỏ hàng trống</h2>
+                <p>Bạn chưa có sản phẩm nào trong giỏ hàng. Hãy khám phá các món bánh ngon của chúng tôi!</p>
+                <a href="index.html" class="btn-primary-hero">Tiếp Tục Mua Sắm</a>
+            </div>
+
+            <!-- Cart with Items -->
+            <div class="cart-content" id="cartContent" style="display: none;">
+                <div class="cart-items" id="cartItems">
+                    <!-- Items will be inserted here by JavaScript -->
+                </div>
+
+                <div class="cart-summary">
+                    <h2>Tổng Đơn Hàng</h2>
+                    <div class="summary-row">
+                        <span>Tạm tính:</span>
+                        <span class="price" id="subtotal">0đ</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Phí vận chuyển:</span>
+                        <span class="price" id="shipping">Miễn phí</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Tổng cộng:</span>
+                        <span class="price" id="total">0đ</span>
+                    </div>
+                    <button class="btn-checkout" onclick="checkout()">Thanh Toán</button>
+                    <a href="index.html"><button class="btn-continue">Tiếp Tục Mua Sắm</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-modern">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg class="logo-icon" width="28" height="28" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 2C17.523 2 22 6.477 22 12C22 17.523 17.523 22 12 22C6.477 22 2 17.523 2 12C2 6.477 6.477 2 12 2Z"
+                                stroke="#E11D48" stroke-width="1.5" fill="#FDF2F8" />
+                            <path
+                                d="M8 10C8 8.895 8.895 8 10 8H14C15.105 8 16 8.895 16 10V12C16 13.105 15.105 14 14 14H10C8.895 14 8 13.105 8 12V10Z"
+                                fill="#E11D48" />
+                            <circle cx="10" cy="16" r="1" fill="#E11D48" />
+                            <circle cx="14" cy="16" r="1" fill="#E11D48" />
+                        </svg>
+                        <span>Sweet Dreams</span>
+                    </div>
+                    <p class="footer-description">Tiệm bánh ngọt cao cấp với 10+ năm kinh nghiệm</p>
+                </div>
+                <div class="footer-column">
+                    <h3 class="footer-title">Liên Hệ</h3>
+                    <ul class="footer-links">
+                        <li>📍 Số 150, Ngõ 43 Cổ Nhuế, Bắc Từ Liêm, Hà Nội</li>
+                        <li>📞 0336 981 413</li>
+                        <li>✉️ vuonghienn20@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-modern">
+                <p>&copy; 2024 Sweet Dreams Bakery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cart.js"></script>
+    <script>
+        function renderCart() {
+            const cart = window.cart;
+            if (!cart || cart.items.length === 0) {
+                document.getElementById('cartEmpty').style.display = 'block';
+                document.getElementById('cartContent').style.display = 'none';
+                return;
+            }
+
+            document.getElementById('cartEmpty').style.display = 'none';
+            document.getElementById('cartContent').style.display = 'grid';
+
+            const cartItemsContainer = document.getElementById('cartItems');
+            cartItemsContainer.innerHTML = cart.items.map(item => `
+                <div class="cart-item" data-id="${item.id}">
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}">
+                    </div>
+                    <div class="cart-item-info">
+                        <h3>${item.name}</h3>
+                        <div class="cart-item-price">${item.price.toLocaleString('vi-VN')}đ</div>
+                        <div class="cart-item-controls">
+                            <div class="cart-qty-selector">
+                                <button class="cart-qty-btn minus" onclick="updateCartQuantity('${item.id}', ${item.quantity - 1})">-</button>
+                                <input type="number" class="cart-qty-input" value="${item.quantity}" readonly>
+                                <button class="cart-qty-btn plus" onclick="updateCartQuantity('${item.id}', ${item.quantity + 1})">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-item-actions">
+                        <div class="cart-item-total">${(item.price * item.quantity).toLocaleString('vi-VN')}đ</div>
+                        <button class="cart-item-remove" onclick="removeFromCart('${item.id}')" title="Xóa">🗑️</button>
+                    </div>
+                </div>
+            `).join('');
+
+            const subtotal = cart.getTotal();
+            document.getElementById('subtotal').textContent = subtotal.toLocaleString('vi-VN') + 'đ';
+            document.getElementById('total').textContent = subtotal.toLocaleString('vi-VN') + 'đ';
+        }
+
+        function updateCartQuantity(productId, quantity) {
+            if (quantity < 1) return;
+            window.cart.updateQuantity(productId, quantity);
+            renderCart();
+        }
+
+        function removeFromCart(productId) {
+            if (confirm('Bạn có chắc muốn xóa sản phẩm này?')) {
+                window.cart.removeItem(productId);
+                renderCart();
+            }
+        }
+
+        function checkout() {
+            if (!window.cart || window.cart.items.length === 0) {
+                alert('Giỏ hàng trống!');
+                return;
+            }
+            alert('Chức năng thanh toán đang được phát triển. Vui lòng liên hệ: 0336 981 413');
+        }
+
+        // Render cart when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(renderCart, 100);
+        });
+    </script>
+</body>
+
+</html>
