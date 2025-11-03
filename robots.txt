@@ -1,8 +1,31 @@
+# robots.txt for Sweet Dreams Bakery
+# https://web-banhngot.vercel.app
+
 User-agent: *
 Allow: /
 
-# Sitemap
-Sitemap: https://sweetdreams.vn/sitemap.xml
+# Disallow admin pages
+Disallow: /admin-images.html
+Disallow: /admin-server.js
+Disallow: /start-admin.sh
+Disallow: /ADMIN-README.md
+
+# Disallow system files
+Disallow: /*.json
+Disallow: /*.sh
+Disallow: /.git
+Disallow: /.vercel
+Disallow: /node_modules/
+
+# Allow CSS and JS
+Allow: /assets/css/
+Allow: /assets/js/
+
+# Sitemap location
+Sitemap: https://web-banhngot.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
 
 # Allow all major search engines
 User-agent: Googlebot
@@ -16,35 +39,6 @@ Allow: /
 
 User-agent: DuckDuckBot
 Allow: /
-
-# Block access to sensitive directories
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /*.php$
-Disallow: /cgi-bin/
-
-# Allow access to CSS and JS files for proper rendering
-Allow: /assets/css/
-Allow: /assets/js/
-Allow: /assets/images/
-
-# Crawl delay (optional - can help with server load)
-Crawl-delay: 1
-
-# Specific rules for different bots
-User-agent: ia_archiver
-Disallow: /
-
-User-agent: ScreamingFrogSEOSpider
-Allow: /
-
-# Block image hotlinking bots
-User-agent: psbot
-Disallow: /
-
-User-agent: webcollage
-Disallow: /
 
 # Allow social media bots for better sharing
 User-agent: facebookexternalhit
@@ -64,4 +58,11 @@ User-agent: MJ12bot
 Crawl-delay: 10
 
 User-agent: DotBot
+Disallow: /
+
+# Block image hotlinking bots
+User-agent: psbot
+Disallow: /
+
+User-agent: webcollage
 Disallow: /
