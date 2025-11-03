@@ -1,0 +1,21 @@
+# Node modules
+node_modules/
+
+# Uploaded images
+assets/images/uploads/*
+!assets/images/uploads/.gitkeep
+
+# Backup files
+backups/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*

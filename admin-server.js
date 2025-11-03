@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 const cors = require('cors');
+const multer = require('multer');
 
 const app = express();
 const PORT = 3001;
@@ -10,7 +11,42 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
 
-// Danh sách các file HTML cần quét
+// Cấu hình multer để upload file
+const storage = multer.diskStorage({
+    destination: async (req, file, cb) => {
+        const uploadDir = path.join(__dirname, 'assets/images/uploads');
+        try {
+            await fs.mkdir(uploadDir, { recursive: true });
+            cb(null, uploadDir);
+        } catch (err) {
+            cb(err);
+        }
+    },
+    filename: (req, file, cb) => {
+        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+        const ext = path.extname(file.originalname);
+        const name = path.basename(file.originalname, ext).replace(/[^a-z0-9]/gi, '-').toLowerCase();
+        cb(null, name + '-' + uniqueSuffix + ext);
+    }
+});
+
+const upload = multer({
+    storage: storage,
+    limits: { fileSize: 5 * 1024 * 1024 }, // 5MB limit
+    fileFilter: (req, file, cb) => {
+        const allowedTypes = /jpeg|jpg|png|gif|webp/;
+        const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
+        const mimetype = allowedTypes.test(file.mimetype);
+        
+        if (mimetype && extname) {
+            return cb(null, true);
+        } else {
+            cb(new Error('Chỉ chấp nhận file ảnh (JPEG, PNG, GIF, WebP)!'));
+        }
+    }
+});
+
+// Danh sách các file HTML cần quét (bao gồm tất cả file products)
 const HTML_FILES = [
     'index.html',
     'blog.html',
@@ -21,8 +57,47 @@ const HTML_FILES = [
     'banh-su-kem.html',
     'blog/macaron-vs-su-kem.html',
     'blog/top-5-tiem-banh-ngot.html',
-    'blog/bi-quyet-lam-banh-bong-lan-cuon.html'
+    'blog/bi-quyet-lam-banh-bong-lan-cuon.html',
+    'products/anpan-dau-do.html',
+    'products/banh-bo-lo-bao.html',
+    'products/banh-tart-trung-classic.html',
+    'products/char-siu-bao.html',
+    'products/chocolate-roll-decadent.html',
+    'products/chocolate-spiral.html',
+    'products/macaron-pistachio-sicilia.html',
+    'products/macaron-rose-romantique.html',
+    'products/macaron-salted-caramel.html',
+    'products/matcha-roll-zen.html',
+    'products/melon-pan-classic.html',
+    'products/roll-cake-dau-tay.html',
+    'products/su-kem-chocolate-dam-da.html',
+    'products/su-kem-matcha-nhat-ban.html',
+    'products/su-kem-vanilla-classic.html'
 ];
+
+// API: Upload ảnh
+app.post('/api/upload', upload.single('image'), async (req, res) => {
+    try {
+        if (!req.file) {
+            return res.status(400).json({ error: 'Không có file nào được upload!' });
+        }
+
+        // Tạo URL tương đối từ root của website
+        const imageUrl = `assets/images/uploads/${req.file.filename}`;
+        
+        res.json({
+            success: true,
+            message: 'Upload thành công!',
+            filename: req.file.filename,
+            path: imageUrl,
+            url: imageUrl,
+            size: req.file.size,
+            mimetype: req.file.mimetype
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 // API: Lấy danh sách tất cả ảnh từ các file HTML
 app.get('/api/images', async (req, res) => {

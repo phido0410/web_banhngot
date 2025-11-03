@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,7 +43,7 @@
             background: white;
             padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
 
@@ -61,7 +62,7 @@
             background: white;
             padding: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             margin-bottom: 2rem;
         }
 
@@ -108,14 +109,14 @@
         .image-card {
             background: white;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             overflow: hidden;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .image-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
         }
 
         .image-preview {
@@ -311,6 +312,7 @@
                 opacity: 0;
                 transform: translateY(-10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -334,8 +336,13 @@
         }
 
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         .modal {
@@ -346,7 +353,7 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             animation: fadeIn 0.3s ease;
         }
 
@@ -366,8 +373,13 @@
         }
 
         @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
         }
 
         @keyframes slideUp {
@@ -375,6 +387,7 @@
                 opacity: 0;
                 transform: translateY(20px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -404,6 +417,69 @@
             color: #333;
         }
 
+        /* Upload styles */
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-wrapper input[type="file"] {
+            display: none;
+        }
+
+        .file-input-label {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background: #f8f9fa;
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.875rem;
+            color: #666;
+        }
+
+        .file-input-label:hover {
+            background: #e9ecef;
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .file-input-label.has-file {
+            background: #f1f8f4;
+            border-color: #4caf50;
+            border-style: solid;
+            color: #4caf50;
+        }
+
+        .upload-preview-small {
+            margin-top: 0.5rem;
+            display: none;
+        }
+
+        .upload-preview-small.show {
+            display: block;
+        }
+
+        .upload-preview-small img {
+            width: 100%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-info-small {
+            font-size: 0.75rem;
+            color: #666;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+        }
+
         @media (max-width: 768px) {
             .images-grid {
                 grid-template-columns: 1fr;
@@ -427,6 +503,7 @@
         }
     </style>
 </head>
+
 <body>
     <div class="admin-container">
         <!-- Header -->
@@ -530,10 +607,10 @@
             try {
                 const response = await fetch(`${API_URL}/images`);
                 if (!response.ok) throw new Error('Không thể kết nối server!');
-                
+
                 imageData = await response.json();
                 filteredData = [...imageData];
-                
+
                 console.log(`✅ Đã tải ${imageData.length} ảnh từ ${new Set(imageData.map(i => i.file)).size} file HTML`);
             } catch (error) {
                 showAlert('error', '❌ Lỗi: ' + error.message + '. Vui lòng chạy server trước!');
@@ -545,7 +622,7 @@
         function populateFileFilter() {
             const filterFile = document.getElementById('filterFile');
             const files = [...new Set(imageData.map(img => img.file))];
-            
+
             files.forEach(file => {
                 const option = document.createElement('option');
                 option.value = file;
@@ -557,9 +634,10 @@
         // Update statistics
         function updateStats() {
             document.getElementById('totalImages').textContent = imageData.length;
-            document.getElementById('updatedImages').textContent = Object.keys(changes).length;
-            document.getElementById('pendingImages').textContent = imageData.length - Object.keys(changes).length;
-            
+            const uploaded = Object.values(changes).filter(c => c.uploaded).length;
+            document.getElementById('updatedImages').textContent = uploaded;
+            document.getElementById('pendingImages').textContent = imageData.length - uploaded;
+
             const files = new Set(imageData.map(img => img.file));
             document.getElementById('totalFiles').textContent = files.size;
         }
@@ -578,8 +656,8 @@
                 const card = document.createElement('div');
                 card.className = 'image-card';
                 card.innerHTML = `
-                    <div class="image-preview">
-                        <img src="${changes[img.imageName] || img.currentSrc}" 
+                    <div class="image-preview" id="preview-${index}">
+                        <img src="${changes[img.imageName]?.url || img.currentSrc}" 
                              alt="${img.alt}"
                              onerror="this.parentElement.classList.add('no-image'); this.style.display='none';">
                     </div>
@@ -591,18 +669,23 @@
                             ${changes[img.imageName] ? '<span class="meta-badge" style="background: #4caf50; color: white;">✓ Đã sửa</span>' : ''}
                         </div>
                         <div class="input-group">
-                            <label>🔗 Link ảnh mới</label>
-                            <input type="url" 
-                                   id="url-${index}" 
-                                   value="${changes[img.imageName] || img.currentSrc}"
-                                   placeholder="Nhập URL ảnh mới..."
-                                   class="${changes[img.imageName] ? 'updated' : ''}">
+                            <label>� Chọn ảnh mới từ thiết bị</label>
+                            <div class="file-input-wrapper">
+                                <input type="file" 
+                                       id="file-${index}" 
+                                       accept="image/*"
+                                       onchange="handleFileSelect(event, '${img.imageName}', ${index})">
+                                <label for="file-${index}" class="file-input-label" id="label-${index}">
+                                    📁 Click để chọn ảnh...
+                                </label>
+                            </div>
+                            <div class="upload-preview-small" id="upload-preview-${index}"></div>
                         </div>
                         <div class="button-group">
-                            <button class="btn btn-primary" onclick="updateImage('${img.imageName}', ${index})">
+                            <button class="btn btn-primary" id="btn-${index}" onclick="updateImage('${img.imageName}', ${index})" disabled>
                                 💾 Cập nhật
                             </button>
-                            <button class="btn btn-preview" onclick="previewImage('${img.imageName}', ${index})">
+                            <button class="btn btn-preview" onclick="previewCurrentImage('${img.imageName}', ${index})">
                                 👁️ Xem
                             </button>
                         </div>
@@ -612,22 +695,92 @@
             });
         }
 
+        // Handle file select
+        async function handleFileSelect(event, imageName, index) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            // Validate file
+            if (!file.type.startsWith('image/')) {
+                showAlert('error', '❌ Vui lòng chọn file ảnh!');
+                return;
+            }
+
+            if (file.size > 5 * 1024 * 1024) {
+                showAlert('error', '❌ File quá lớn! Vui lòng chọn file nhỏ hơn 5MB');
+                return;
+            }
+
+            // Show preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const previewDiv = document.getElementById(`upload-preview-${index}`);
+                const previewImg = document.getElementById(`preview-${index}`).querySelector('img');
+
+                previewDiv.innerHTML = `
+                    <img src="${e.target.result}" alt="Preview">
+                    <div class="upload-info-small">
+                        📁 ${file.name} (${formatFileSize(file.size)})
+                    </div>
+                `;
+                previewDiv.classList.add('show');
+
+                // Update main preview
+                previewImg.src = e.target.result;
+                previewImg.style.display = 'block';
+                previewImg.parentElement.classList.remove('no-image');
+            };
+            reader.readAsDataURL(file);
+
+            // Update label
+            const label = document.getElementById(`label-${index}`);
+            label.textContent = `✓ ${file.name}`;
+            label.classList.add('has-file');
+
+            // Upload to server
+            try {
+                showAlert('success', '⏳ Đang upload ảnh...');
+
+                const formData = new FormData();
+                formData.append('image', file);
+
+                const response = await fetch(`${API_URL}/upload`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    // Store the uploaded URL
+                    if (!changes[imageName]) {
+                        changes[imageName] = {};
+                    }
+                    changes[imageName].url = result.url;
+                    changes[imageName].uploaded = true;
+
+                    // Enable update button
+                    document.getElementById(`btn-${index}`).disabled = false;
+
+                    showAlert('success', '✅ Upload thành công! Click "Cập nhật" để áp dụng.');
+                    updateStats();
+                } else {
+                    showAlert('error', '❌ ' + (result.error || 'Upload thất bại!'));
+                }
+            } catch (error) {
+                showAlert('error', '❌ Lỗi upload: ' + error.message);
+                console.error(error);
+            }
+        }
+
         // Update single image
         async function updateImage(imageName, index) {
-            const input = document.getElementById(`url-${index}`);
-            const newUrl = input.value.trim();
-
-            if (!newUrl) {
-                showAlert('error', 'Vui lòng nhập URL ảnh!');
+            if (!changes[imageName] || !changes[imageName].url) {
+                showAlert('error', 'Vui lòng chọn ảnh trước!');
                 return;
             }
 
-            if (!isValidUrl(newUrl)) {
-                showAlert('error', 'URL không hợp lệ!');
-                return;
-            }
-
-            // Tìm image data
+            const newUrl = changes[imageName].url;
             const imageInfo = filteredData[index];
             const oldUrl = imageInfo.currentSrc;
 
@@ -648,11 +801,10 @@
                 if (response.ok && result.success) {
                     // Update local data
                     imageInfo.currentSrc = newUrl;
-                    changes[imageName] = newUrl;
-                    input.classList.add('updated');
+                    changes[imageName].saved = true;
                     updateStats();
                     showAlert('success', `✅ Đã cập nhật "${imageInfo.alt}" trong file ${imageInfo.file}`);
-                    
+
                     // Re-render
                     renderImages();
                 } else {
@@ -664,25 +816,28 @@
             }
         }
 
-        // Preview image
-        function previewImage(imageName, index) {
-            const input = document.getElementById(`url-${index}`);
-            const url = input.value.trim();
-
-            if (!url) {
-                showAlert('error', 'Chưa có URL để xem!');
-                return;
-            }
+        // Preview current image
+        function previewCurrentImage(imageName, index) {
+            const url = changes[imageName]?.url || filteredData[index].currentSrc;
 
             const modal = document.getElementById('previewModal');
             const modalImage = document.getElementById('modalImage');
             const modalTitle = document.getElementById('modalTitle');
             const modalUrl = document.getElementById('modalUrl');
 
-            modalTitle.textContent = imageData.find(img => img.imageName === imageName)?.alt || imageName;
+            modalTitle.textContent = filteredData[index].alt;
             modalImage.src = url;
             modalUrl.textContent = url;
             modal.classList.add('show');
+        }
+
+        // Format file size
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return Math.round(bytes / Math.pow(k, i) * 100) / 100 + ' ' + sizes[i];
         }
 
         // Close modal
@@ -713,20 +868,27 @@
                 return;
             }
 
-            if (!confirm(`Bạn có chắc muốn lưu ${Object.keys(changes).length} thay đổi?`)) {
+            // Count unsaved changes
+            const unsaved = Object.entries(changes).filter(([name, data]) => data.uploaded && !data.saved);
+            if (unsaved.length === 0) {
+                showAlert('error', 'Tất cả đã được cập nhật!');
+                return;
+            }
+
+            if (!confirm(`Bạn có chắc muốn lưu ${unsaved.length} thay đổi?`)) {
                 return;
             }
 
             try {
                 // Prepare update data
                 const updates = [];
-                Object.entries(changes).forEach(([imageName, newUrl]) => {
+                unsaved.forEach(([imageName, data]) => {
                     const img = imageData.find(i => i.imageName === imageName);
                     if (img) {
                         updates.push({
                             file: img.file,
                             oldUrl: img.originalSrc,
-                            newUrl: newUrl
+                            newUrl: data.url
                         });
                     }
                 });
@@ -742,7 +904,12 @@
 
                 if (response.ok && result.success) {
                     showAlert('success', `✅ Đã cập nhật ${result.successful}/${result.total} ảnh thành công!`);
-                    
+
+                    // Mark as saved
+                    unsaved.forEach(([name]) => {
+                        if (changes[name]) changes[name].saved = true;
+                    });
+
                     // Reload data
                     await loadImages();
                     changes = {};
@@ -792,7 +959,7 @@
             document.getElementById('filterFile').addEventListener('change', filterImages);
             document.getElementById('filterStatus').addEventListener('change', filterImages);
             document.getElementById('searchImage').addEventListener('input', filterImages);
-            
+
             // Close modal when clicking outside
             window.addEventListener('click', (e) => {
                 const modal = document.getElementById('previewModal');
@@ -810,10 +977,11 @@
 
             filteredData = imageData.filter(img => {
                 const matchFile = fileFilter === 'all' || img.file === fileFilter;
-                const matchStatus = statusFilter === 'all' || 
-                    (statusFilter === 'updated' && changes[img.imageName]) ||
-                    (statusFilter === 'pending' && !changes[img.imageName]);
-                const matchSearch = img.imageName.toLowerCase().includes(searchTerm) || 
+                const hasChange = changes[img.imageName] && changes[img.imageName].uploaded;
+                const matchStatus = statusFilter === 'all' ||
+                    (statusFilter === 'updated' && hasChange) ||
+                    (statusFilter === 'pending' && !hasChange);
+                const matchSearch = img.imageName.toLowerCase().includes(searchTerm) ||
                     img.alt.toLowerCase().includes(searchTerm);
 
                 return matchFile && matchStatus && matchSearch;
@@ -834,18 +1002,9 @@
             }, 3000);
         }
 
-        // Validate URL
-        function isValidUrl(string) {
-            try {
-                const url = new URL(string);
-                return url.protocol === 'http:' || url.protocol === 'https:';
-            } catch (_) {
-                return false;
-            }
-        }
-
         // Initialize on load
         window.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
+
 </html>

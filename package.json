@@ -4,17 +4,23 @@
   "description": "Admin panel for Sweet Dreams Website",
   "main": "admin-server.js",
   "scripts": {
-    "start": "node admin-server.js",
+    "start": "nodemon admin-server.js",
+    "start:prod": "node admin-server.js",
     "admin": "bash start-admin.sh",
     "admin:server": "node admin-server.js",
     "dev": "nodemon admin-server.js"
   },
-  "keywords": ["admin", "image-management"],
+  "keywords": [
+    "admin",
+    "image-management"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "multer": "^2.0.2",
+    "sharp": "^0.34.4"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
