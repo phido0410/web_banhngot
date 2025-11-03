@@ -1,10 +1,6 @@
 # Node modules
 node_modules/
 
-# Uploaded images - Comment out để cho phép commit ảnh lên git
-# assets/images/uploads/*
-# !assets/images/uploads/.gitkeep
-
 # Backup files
 backups/
 

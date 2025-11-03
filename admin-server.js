@@ -37,7 +37,7 @@ const upload = multer({
         const allowedTypes = /jpeg|jpg|png|gif|webp/;
         const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
         const mimetype = allowedTypes.test(file.mimetype);
-        
+
         if (mimetype && extname) {
             return cb(null, true);
         } else {
@@ -84,7 +84,7 @@ app.post('/api/upload', upload.single('image'), async (req, res) => {
 
         // Tạo URL tương đối từ root của website
         const imageUrl = `assets/images/uploads/${req.file.filename}`;
-        
+
         res.json({
             success: true,
             message: 'Upload thành công!',
@@ -103,20 +103,20 @@ app.post('/api/upload', upload.single('image'), async (req, res) => {
 app.get('/api/images', async (req, res) => {
     try {
         const allImages = [];
-        
+
         for (const file of HTML_FILES) {
             try {
                 const filePath = path.join(__dirname, file);
                 const content = await fs.readFile(filePath, 'utf-8');
-                
+
                 // Tìm tất cả thẻ img
                 const imgRegex = /<img[^>]+src=["']([^"']+)["'][^>]*alt=["']([^"']*)["'][^>]*>/gi;
                 let match;
-                
+
                 while ((match = imgRegex.exec(content)) !== null) {
                     const src = match[1];
                     const alt = match[2];
-                    
+
                     // Chỉ lấy ảnh từ assets/images hoặc URL
                     if (src.includes('assets/images') || src.startsWith('http')) {
                         allImages.push({
@@ -133,7 +133,7 @@ app.get('/api/images', async (req, res) => {
                 console.log(`Không thể đọc file ${file}: ${err.message}`);
             }
         }
-        
+
         res.json(allImages);
     } catch (error) {
         res.status(500).json({ error: error.message });
@@ -143,31 +143,43 @@ app.get('/api/images', async (req, res) => {
 // API: Cập nhật URL ảnh trong file HTML
 app.post('/api/update-image', async (req, res) => {
     try {
-        const { file, oldUrl, newUrl } = req.body;
-        
+        let { file, oldUrl, newUrl } = req.body;
+
         if (!file || !oldUrl || !newUrl) {
             return res.status(400).json({ error: 'Thiếu thông tin!' });
         }
-        
+
+        // Tự động điều chỉnh đường dẫn cho file trong thư mục con
+        if (file.includes('/') && !newUrl.startsWith('http')) {
+            // Đếm số cấp thư mục
+            const depth = file.split('/').length - 1;
+            const prefix = '../'.repeat(depth);
+
+            // Nếu newUrl chưa có ../, thêm vào
+            if (!newUrl.startsWith('../') && !newUrl.startsWith('/')) {
+                newUrl = prefix + newUrl;
+            }
+        }
+
         const filePath = path.join(__dirname, file);
         let content = await fs.readFile(filePath, 'utf-8');
-        
+
         // Escape special characters trong regex
         const escapedOldUrl = oldUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        
+
         // Thay thế tất cả occurrences
         const regex = new RegExp(`src=["']${escapedOldUrl}["']`, 'g');
         const updatedContent = content.replace(regex, `src="${newUrl}"`);
-        
+
         if (content === updatedContent) {
             return res.status(400).json({ error: 'Không tìm thấy URL để thay thế!' });
         }
-        
+
         // Lưu file
         await fs.writeFile(filePath, updatedContent, 'utf-8');
-        
-        res.json({ 
-            success: true, 
+
+        res.json({
+            success: true,
             message: `Đã cập nhật ảnh trong ${file}`,
             changes: content !== updatedContent
         });
@@ -180,23 +192,23 @@ app.post('/api/update-image', async (req, res) => {
 app.post('/api/update-multiple', async (req, res) => {
     try {
         const { updates } = req.body;
-        
+
         if (!updates || !Array.isArray(updates)) {
             return res.status(400).json({ error: 'Dữ liệu không hợp lệ!' });
         }
-        
+
         const results = [];
-        
+
         for (const update of updates) {
             try {
                 const { file, oldUrl, newUrl } = update;
                 const filePath = path.join(__dirname, file);
                 let content = await fs.readFile(filePath, 'utf-8');
-                
+
                 const escapedOldUrl = oldUrl.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
                 const regex = new RegExp(`src=["']${escapedOldUrl}["']`, 'g');
                 const updatedContent = content.replace(regex, `src="${newUrl}"`);
-                
+
                 if (content !== updatedContent) {
                     await fs.writeFile(filePath, updatedContent, 'utf-8');
                     results.push({ file, success: true });
@@ -207,8 +219,8 @@ app.post('/api/update-multiple', async (req, res) => {
                 results.push({ file: update.file, success: false, error: err.message });
             }
         }
-        
-        res.json({ 
+
+        res.json({
             success: true,
             results,
             total: updates.length,
@@ -225,16 +237,16 @@ app.post('/api/backup', async (req, res) => {
         const backupDir = path.join(__dirname, 'backups');
         const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
         const backupFolder = path.join(backupDir, `backup-${timestamp}`);
-        
+
         // Tạo thư mục backup
         await fs.mkdir(backupFolder, { recursive: true });
-        
+
         // Copy tất cả file HTML
         for (const file of HTML_FILES) {
             try {
                 const sourcePath = path.join(__dirname, file);
                 const destPath = path.join(backupFolder, file);
-                
+
                 // Tạo thư mục con nếu cần
                 await fs.mkdir(path.dirname(destPath), { recursive: true });
                 await fs.copyFile(sourcePath, destPath);
@@ -242,9 +254,9 @@ app.post('/api/backup', async (req, res) => {
                 console.log(`Không thể backup ${file}`);
             }
         }
-        
-        res.json({ 
-            success: true, 
+
+        res.json({
+            success: true,
             message: 'Đã backup thành công!',
             location: backupFolder
         });
