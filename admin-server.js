@@ -1,34 +1,27 @@
+require('dotenv').config();
 const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 const cors = require('cors');
 const multer = require('multer');
+const cloudinary = require('cloudinary').v2;
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(cors());
 app.use(express.json());
 app.use(express.static('.'));
 
-// Cấu hình multer để upload file
-const storage = multer.diskStorage({
-    destination: async (req, file, cb) => {
-        const uploadDir = path.join(__dirname, 'assets/images/uploads');
-        try {
-            await fs.mkdir(uploadDir, { recursive: true });
-            cb(null, uploadDir);
-        } catch (err) {
-            cb(err);
-        }
-    },
-    filename: (req, file, cb) => {
-        const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
-        const ext = path.extname(file.originalname);
-        const name = path.basename(file.originalname, ext).replace(/[^a-z0-9]/gi, '-').toLowerCase();
-        cb(null, name + '-' + uniqueSuffix + ext);
-    }
+// Cấu hình Cloudinary
+cloudinary.config({
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    api_key: process.env.CLOUDINARY_API_KEY,
+    api_secret: process.env.CLOUDINARY_API_SECRET
 });
+
+// Cấu hình multer để lưu file tạm trong memory
+const storage = multer.memoryStorage();
 
 const upload = multer({
     storage: storage,
@@ -75,26 +68,52 @@ const HTML_FILES = [
     'products/su-kem-vanilla-classic.html'
 ];
 
-// API: Upload ảnh
+// API: Upload ảnh lên Cloudinary
 app.post('/api/upload', upload.single('image'), async (req, res) => {
     try {
         if (!req.file) {
             return res.status(400).json({ error: 'Không có file nào được upload!' });
         }
 
-        // Tạo URL tương đối từ root của website
-        const imageUrl = `assets/images/uploads/${req.file.filename}`;
+        // Upload lên Cloudinary từ buffer
+        const uploadPromise = new Promise((resolve, reject) => {
+            const uploadStream = cloudinary.uploader.upload_stream(
+                {
+                    folder: 'sweet-dreams-bakery', // Tạo folder riêng trên Cloudinary
+                    resource_type: 'image',
+                    transformation: [
+                        { width: 1200, height: 1200, crop: 'limit' }, // Giới hạn kích thước
+                        { quality: 'auto:good' }, // Tự động optimize chất lượng
+                        { fetch_format: 'auto' } // Tự động chọn format tốt nhất (WebP cho browser hỗ trợ)
+                    ]
+                },
+                (error, result) => {
+                    if (error) reject(error);
+                    else resolve(result);
+                }
+            );
+
+            // Pipe file buffer vào uploadStream
+            uploadStream.end(req.file.buffer);
+        });
+
+        const result = await uploadPromise;
 
         res.json({
             success: true,
-            message: 'Upload thành công!',
-            filename: req.file.filename,
-            path: imageUrl,
-            url: imageUrl,
-            size: req.file.size,
-            mimetype: req.file.mimetype
+            message: 'Upload thành công lên Cloudinary!',
+            filename: result.public_id,
+            path: result.secure_url,
+            url: result.secure_url, // URL CDN từ Cloudinary
+            size: result.bytes,
+            width: result.width,
+            height: result.height,
+            format: result.format,
+            cloudinary_id: result.public_id,
+            thumbnail: result.secure_url.replace('/upload/', '/upload/w_300,h_300,c_fill/')
         });
     } catch (error) {
+        console.error('Cloudinary upload error:', error);
         res.status(500).json({ error: error.message });
     }
 });

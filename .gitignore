@@ -1,6 +1,11 @@
 # Node modules
 node_modules/
 
+# Environment variables (IMPORTANT: DO NOT COMMIT)
+.env
+.env.local
+.env.*.local
+
 # Backup files
 backups/
 
