@@ -6249,3 +6249,25 @@ img {
         height: 18px;
     }
 }
+
+.product-image {
+    width: 100%;
+    background: #e6d0b4;
+    /* màu nền sau ảnh (tuỳ chọn) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* cho ảnh không bị dính mép */
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    /* giữ tỉ lệ, không bóp méo */
+    object-fit: contain;
+    /* KHÔNG CẮT ẢNH */
+    border-radius: 12px;
+    /* cho đẹp */
+    display: block;
+}
