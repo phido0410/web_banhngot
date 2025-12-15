@@ -6271,3 +6271,40 @@ img {
     /* cho đẹp */
     display: block;
 }
+
+.btn-order {
+    min-width: 120px;
+    height: 44px;
+    padding: 0 1.5rem;
+    background: linear-gradient(135deg, #E11D48 0%, #BE123C 100%);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(225, 29, 72, 0.2);
+}
+
+.btn-order:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(225, 29, 72, 0.35);
+    background: linear-gradient(135deg, #BE123C 0%, #9F1239 100%);
+}
+
+.btn-order span {
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Xóa style cũ của nút tròn nếu có */
+.product-footer .btn-order {
+    width: auto;
+    height: 44px;
+    border-radius: 12px;
+}
