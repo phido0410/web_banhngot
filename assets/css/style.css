@@ -6308,3 +6308,7 @@ img {
     height: 44px;
     border-radius: 12px;
 }
+
+.hero-line-1 {
+    white-space: nowrap;
+}
